@@ -1,6 +1,6 @@
 <div align="center">
   <div>&nbsp;</div>
-  <img src="resources/logo.png" width="400"/>
+  <img src="resources/ov-logo.png" width="400"/>
 
 [Paper](https://arxiv.org/abs/2312.01479) |
 [Website](https://myshell-tts.vercel.app/) 
