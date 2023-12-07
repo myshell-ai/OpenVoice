@@ -2,7 +2,7 @@
   <div>&nbsp;</div>
   <img src="resources/logo.png" width="400"/>
   <div align="center">
-    <font size="8">Versatile Instant Voice Cloning</font>
+    <font size="14">Versatile Instant Voice Cloning</font>
   </div>
 
 [Paper](https://arxiv.org/abs/2312.01479) |
