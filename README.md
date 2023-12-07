@@ -1,9 +1,6 @@
 <div align="center">
   <div>&nbsp;</div>
   <img src="resources/logo.png" width="400"/>
-  <div align="center">
-    <font size="14">Versatile Instant Voice Cloning</font>
-  </div>
 
 [Paper](https://arxiv.org/abs/2312.01479) |
 [Website](https://myshell-tts.vercel.app/) 
