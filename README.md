@@ -29,7 +29,7 @@ OpenVoice has been powering the instant voice cloning capability of [MyShell.ai]
 
 ## Disclaimer
 
-The released models are **half-performance** models, including the base speaker model and the tone color converter model. Once our concerns of the ethical issues such as misuse is cleared, we will release the full-performance models. The online version in MyShell.ai does not use this repository.
+The online version in MyShell.ai does not use this repository. This is an open-source implementation that approximates the performance of the internal voice clone technology of MyShell.ai.
 
 ## Installation
 Clone this repo, and run
@@ -39,18 +39,21 @@ conda activate openvoice
 conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia
 pip install -r requirements.txt
 ```
-Download the checkpoint from here and extract it to the `checkpoints` folder 
+Download the checkpoint from [here](https://drive.google.com/drive/folders/124ZLLiJ_7GeCt3_wOzs61zW6UAiFtARB) and extract it to the `checkpoints` folder 
 
 ## Usage
 
-**1. Basic Usage.**
-Please see `demo.ipynb` for a basic demo usage.
+**1. Flexible Voice Style Control.**
+Please see `demo_part1.ipynb` for an example usage of how OpenVoice enables flexible style control over the cloned voice.
 
-**2. Advanced Usage.**
-The base speaker model can be replaced with any model (in any language and style) that the user prefer. With the tone color converter, the user is able to clone the reference voice and generate speech in any language and any style they desire, as long as they have the single-speaker base model. Please use the `se_extractor.get_se` function as demonstrated in `demo.ipynb` to extract the tone color embedding for the new base speaker.
+**2. Cross-Lingual Voice Cloning.**
+Please see `demo_part2.ipynb` for an example for languages seen or unseen in the MSML training set.
 
-**3. Tips to Generate Natural Speech.**
-There are many single or multi-speaker TTS methods that can generate natural speech, and are readily available, such as the open-source VITS and closed-sourced OpenAI TTS. By simply replacing the base speaker model with the model you prefer, you can push the speech naturalness to a level you desire.
+**3. Advanced Usage.**
+The base speaker model can be replaced with any model (in any language and style) that the user prefer. Please use the `se_extractor.get_se` function as demonstrated in the demo to extract the tone color embedding for the new base speaker.
+
+**4. Tips to Generate Natural Speech.**
+There are many single or multi-speaker TTS methods that can generate natural speech, and are readily available. By simply replacing the base speaker model with the model you prefer, you can push the speech naturalness to a level you desire.
 
 ## Citation
 ```

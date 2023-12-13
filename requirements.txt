@@ -1,0 +1,10 @@
+librosa==0.9.1
+faster-whisper==0.9.0
+pydub==0.25.1
+wavmark==0.0.2
+numpy==1.22.0
+eng_to_ipa==0.0.2
+inflect==7.0.0
+unidecode==1.3.7
+openai
+python-dotenv
