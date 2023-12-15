@@ -1,16 +1,15 @@
 import torch
-import torch.nn as nn
-import utils
-from models import SynthesizerTrn
-import torchaudio
-import commons
-import os
-from mel_processing import spectrogram_torch, spectrogram_torch_conv
-import librosa
 import numpy as np
-from text import text_to_sequence
 import re
 import soundfile
+import utils
+import commons
+import os
+import librosa
+from text import text_to_sequence
+from mel_processing import spectrogram_torch
+from models import SynthesizerTrn
+
 
 class OpenVoiceBaseClass(object):
     def __init__(self, 
@@ -53,23 +52,47 @@ class BaseSpeakerTTS(OpenVoiceBaseClass):
         text_norm = torch.LongTensor(text_norm)
         return text_norm
 
+    @staticmethod
+    def audio_numpy_concat(segment_data_list, sr, speed=1.):
+        audio_segments = []
+        for segment_data in segment_data_list:
+            audio_segments += segment_data.reshape(-1).tolist()
+            audio_segments += [0] * int((sr * 0.05)/speed)
+        audio_segments = np.array(audio_segments).astype(np.float32)
+        return audio_segments
+
+    @staticmethod
+    def split_sentences_into_pieces(text):
+        texts = utils.split_sentences_latin(text)
+        print(" > Text splitted to sentences.")
+        print('\n'.join(texts))
+        print(" > ===========================")
+        return texts
+
     def tts(self, text, output_path, speaker, language='English', speed=1.0):
         mark = self.language_marks.get(language.lower(), None)
         assert mark is not None, f"language {language} is not supported"
-        text = re.sub(r'([a-z])([A-Z])', r'\1 \2', text)
-        text = mark + text + mark
-        stn_tst = self.get_text(text, self.hps, False)
-        device = self.device
-        speaker_id = self.hps.speakers[speaker]
-        with torch.no_grad():
-            x_tst = stn_tst.unsqueeze(0).to(device)
-            x_tst_lengths = torch.LongTensor([stn_tst.size(0)]).to(device)
-            sid = torch.LongTensor([speaker_id]).to(device)
-            audio = self.model.infer(x_tst, x_tst_lengths, sid=sid, noise_scale=0.667, noise_scale_w=0.6,
-                                length_scale=1.0 / speed)[0][0, 0].data.cpu().float().numpy()
-        
+
+        texts = self.split_sentences_into_pieces(text)
+
+        audio_list = []
+        for t in texts:
+            t = re.sub(r'([a-z])([A-Z])', r'\1 \2', t)
+            t = mark + t + mark
+            stn_tst = self.get_text(t, self.hps, False)
+            device = self.device
+            speaker_id = self.hps.speakers[speaker]
+            with torch.no_grad():
+                x_tst = stn_tst.unsqueeze(0).to(device)
+                x_tst_lengths = torch.LongTensor([stn_tst.size(0)]).to(device)
+                sid = torch.LongTensor([speaker_id]).to(device)
+                audio = self.model.infer(x_tst, x_tst_lengths, sid=sid, noise_scale=0.667, noise_scale_w=0.6,
+                                    length_scale=1.0 / speed)[0][0, 0].data.cpu().float().numpy()
+            audio_list.append(audio)
+        audio = self.audio_numpy_concat(audio_list, sr=self.hps.data.sampling_rate, speed=speed)
+
         if output_path is None:
-            return audio.numpy()
+            return audio
         else:
             soundfile.write(output_path, audio, self.hps.data.sampling_rate)
 

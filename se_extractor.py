@@ -1,26 +1,9 @@
 import os
-from pydub import AudioSegment
-import string
-from faster_whisper import WhisperModel
 import glob
-import random
 import torch
-import numpy as np
 from glob import glob
-import librosa
-from mel_processing import spectrogram_torch
-
-def is_english(s):
-    valid_chars = string.ascii_letters + string.digits + string.whitespace + string.punctuation
-    return all(char in valid_chars for char in s)
-
-def is_chinese(sentence):
-    valid_chars = string.whitespace + string.punctuation
-    for char in sentence:
-        if (char < '\u4e00' or char > '\u9fff') and char not in valid_chars:
-            return False
-    return True
-
+from pydub import AudioSegment
+from faster_whisper import WhisperModel
 
 model_size = "medium"
 # Run on GPU with FP16
