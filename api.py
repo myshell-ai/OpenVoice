@@ -133,7 +133,6 @@ class ToneColorConverter(OpenVoiceBaseClass):
                 return audio
             else:
                 soundfile.write(output_path, audio, hps.data.sampling_rate)
-                # torchaudio.save(output_path, audio.unsqueeze(0), hps.data.sampling_rate)
     
     def add_watermark(self, audio, message):
         if self.watermark_model is None:
@@ -146,6 +145,9 @@ class ToneColorConverter(OpenVoiceBaseClass):
         coeff = 2
         for n in range(n_repeat):
             trunck = audio[(coeff * n) * K: (coeff * n + 1) * K]
+            if len(trunck) != K:
+                print('Audio too short, fail to add watermark')
+                break
             message_npy = bits[n * 32: (n + 1) * 32]
             
             with torch.no_grad():
@@ -154,7 +156,6 @@ class ToneColorConverter(OpenVoiceBaseClass):
                 signal_wmd_tensor = self.watermark_model.encode(signal, message_tensor)
                 signal_wmd_npy = signal_wmd_tensor.detach().cpu().squeeze()
             audio[(coeff * n) * K: (coeff * n + 1) * K] = signal_wmd_npy
-        # print(f'detected message:', self.detect_watermark(audio, n_repeat))
         return audio
 
     def detect_watermark(self, audio, n_repeat):
@@ -163,6 +164,9 @@ class ToneColorConverter(OpenVoiceBaseClass):
         coeff = 2
         for n in range(n_repeat):
             trunck = audio[(coeff * n) * K: (coeff * n + 1) * K]
+            if len(trunck) != K:
+                print('Audio too short, fail to detect watermark')
+                return 'Fail'
             with torch.no_grad():
                 signal = torch.FloatTensor(trunck).to(self.device).unsqueeze(0)
                 message_decoded_npy = (self.watermark_model.decode(signal) >= 0.5).int().detach().cpu().numpy().squeeze()
