@@ -7,7 +7,6 @@
 
 </div>
 
-
 ## Introduction
 As we detailed in our [paper](https://arxiv.org/abs/2312.01479) and [website](https://research.myshell.ai/open-voice), the advantages of OpenVoice are three-fold:
 
@@ -20,7 +19,7 @@ OpenVoice enables granular control over voice styles, such as emotion and accent
 **3. Zero-shot Cross-lingual Voice Cloning.**
 Neither of the language of the generated speech nor the language of the reference speech needs to be presented in the massive-speaker multi-lingual training dataset.
 
-[Video]()
+[Video](https://github.com/myshell-ai/OpenVoice/assets/40556743/3cba936f-82bf-476c-9e52-09f0f417bb2f)
 
 <div align="center">
   <div>&nbsp;</div>
