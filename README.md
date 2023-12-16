@@ -1,14 +1,15 @@
 <div align="center">
   <div>&nbsp;</div>
-  <img src="resources/ov-logo.png" width="400"/>
+  <img src="resources/OpenVoiceLogo.png" width="400"/> 
 
 [Paper](https://arxiv.org/abs/2312.01479) |
-[Website](https://myshell-tts.vercel.app/) 
+[Website](https://research.myshell.ai/open-voice) 
 
 </div>
 
+
 ## Introduction
-As we detailed in our [paper](https://arxiv.org/abs/2312.01479) and [website](https://myshell-tts.vercel.app/), the advantages of OpenVoice are three-fold:
+As we detailed in our [paper](https://arxiv.org/abs/2312.01479) and [website](https://research.myshell.ai/open-voice), the advantages of OpenVoice are three-fold:
 
 **1. Accurate Tone Color Cloning.**
 OpenVoice can accurately clone the reference tone color and generate speech in multiple languages and accents.
@@ -19,17 +20,34 @@ OpenVoice enables granular control over voice styles, such as emotion and accent
 **3. Zero-shot Cross-lingual Voice Cloning.**
 Neither of the language of the generated speech nor the language of the reference speech needs to be presented in the massive-speaker multi-lingual training dataset.
 
+[Video]()
+
 <div align="center">
   <div>&nbsp;</div>
     <img src="resources/framework.png" width="800"/>
   <div>&nbsp;</div>
 </div>
 
-OpenVoice has been powering the instant voice cloning capability of [MyShell.ai](https://myshell.ai/) (a decentralized and comprehensive platform for discovering, creating, and staking AI-native apps) since May 2023. Until Nov 2023, the voice cloning model has been used tens of millions of times by users worldwide, and witnessed the explosive user growth on the platform.
+OpenVoice has been powering the instant voice cloning capability of [myshell.ai](https://app.myshell.ai/explore) since May 2023. Until Nov 2023, the voice cloning model has been used tens of millions of times by users worldwide, and witnessed the explosive user growth on the platform.
+
+## Main Contributors
+
+- [Zengyi Qin](https://www.qinzy.tech) at MIT and MyShell
+- [Wenliang Zhao](https://wl-zhao.github.io) at Tsinghua University
+- [Xumin Yu](https://yuxumin.github.io) at Tsinghua University
+- [Ethan Sun](https://twitter.com/ethan_myshell) at MyShell
+
+## Live Demo
+
+<div align="center">
+    <a href="https://app.myshell.ai/explore"><img src="resources/myshell.png"></a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://www.lepton.ai/playground/openvoice"><img src="resources/lepton.png"></a>
+</div>
 
 ## Disclaimer
 
-The online version in MyShell.ai does not use this repository. This is an open-source implementation that approximates the performance of the internal voice clone technology of MyShell.ai.
+**The online version in [myshell.ai](https://app.myshell.ai/explore) does not use this repository**. This is an open-source implementation that approximates the performance of the internal voice clone technology of MyShell.ai.
 
 ## Installation
 Clone this repo, and run
@@ -39,7 +57,7 @@ conda activate openvoice
 conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia
 pip install -r requirements.txt
 ```
-Download the checkpoint from [here](https://drive.google.com/drive/folders/124ZLLiJ_7GeCt3_wOzs61zW6UAiFtARB) and extract it to the `checkpoints` folder 
+Download the checkpoint from [here](https://myshell-public-repo-hosting.s3.amazonaws.com/checkpoints_openvoice.zip) and extract it to the `checkpoints` folder 
 
 ## Usage
 
@@ -54,6 +72,16 @@ The base speaker model can be replaced with any model (in any language and style
 
 **4. Tips to Generate Natural Speech.**
 There are many single or multi-speaker TTS methods that can generate natural speech, and are readily available. By simply replacing the base speaker model with the model you prefer, you can push the speech naturalness to a level you desire.
+
+## Roadmap
+
+- [x] Inference code
+- [x] Tone color converter model
+- [x] Multi-style base speaker model
+- [x] Multi-style and multi-lingual demo
+- [ ] Base speaker model in other languages
+- [ ] EN base speaker model with better naturalness
+
 
 ## Citation
 ```
