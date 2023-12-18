@@ -1,6 +1,6 @@
 <div align="center">
   <div>&nbsp;</div>
-  <img src="resources/OpenVoiceLogo.jpg" width="400"/> 
+  <img src="resources/openvoicelogo.jpg" width="400"/> 
 
 [Paper](https://arxiv.org/abs/2312.01479) |
 [Website](https://research.myshell.ai/open-voice) 
