@@ -41,7 +41,8 @@ class OpenVoiceBaseClass(object):
 
 class BaseSpeakerTTS(OpenVoiceBaseClass):
     language_marks = {
-        "english": "[EN]",
+        "english": "EN",
+        "chinese": "ZH",
     }
 
     @staticmethod
@@ -62,8 +63,8 @@ class BaseSpeakerTTS(OpenVoiceBaseClass):
         return audio_segments
 
     @staticmethod
-    def split_sentences_into_pieces(text):
-        texts = utils.split_sentences_latin(text)
+    def split_sentences_into_pieces(text, language_str):
+        texts = utils.split_sentence(text, language_str=language_str)
         print(" > Text splitted to sentences.")
         print('\n'.join(texts))
         print(" > ===========================")
@@ -73,12 +74,12 @@ class BaseSpeakerTTS(OpenVoiceBaseClass):
         mark = self.language_marks.get(language.lower(), None)
         assert mark is not None, f"language {language} is not supported"
 
-        texts = self.split_sentences_into_pieces(text)
+        texts = self.split_sentences_into_pieces(text, mark)
 
         audio_list = []
         for t in texts:
             t = re.sub(r'([a-z])([A-Z])', r'\1 \2', t)
-            t = mark + t + mark
+            t = f'[{mark}]{t}[{mark}]'
             stn_tst = self.get_text(t, self.hps, False)
             device = self.device
             speaker_id = self.hps.speakers[speaker]
