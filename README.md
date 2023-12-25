@@ -56,7 +56,7 @@ conda activate openvoice
 conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia
 pip install -r requirements.txt
 ```
-Download the checkpoint from [here](https://drive.google.com/drive/folders/1SUBGg88sqpY921Qsc9hkv5wEXORD6WsC?usp=drive_link) and extract it to the `checkpoints` folder 
+Download the checkpoint from [here](https://myshell-public-repo-hosting.s3.amazonaws.com/checkpoints_openvoice_1214.zip) and extract it to the `checkpoints` folder 
 
 ## Usage
 
