@@ -2,6 +2,7 @@ import os
 import glob
 import torch
 from glob import glob
+import numpy as np
 from pydub import AudioSegment
 from faster_whisper import WhisperModel
 from whisper_timestamped.transcribe import get_audio_tensor, get_vad_segments
@@ -68,7 +69,7 @@ def split_audio_whisper(audio_path, target_dir='processed'):
     return wavs_folder
 
 
-def split_audio_vad(audio_path, target_dir, split_seconds=10):
+def split_audio_vad(audio_path, target_dir, split_seconds=10.0):
     SAMPLE_RATE = 16000
     audio_vad = get_audio_tensor(audio_path)
     segments = get_vad_segments(
@@ -79,7 +80,7 @@ def split_audio_vad(audio_path, target_dir, split_seconds=10):
         method="silero",
     )
     segments = [(seg["start"], seg["end"]) for seg in segments]
-    segments = [(float(s)/SAMPLE_RATE, float(e)/SAMPLE_RATE) for s,e in segments]
+    segments = [(float(s) / SAMPLE_RATE, float(e) / SAMPLE_RATE) for s,e in segments]
     print(segments)
     audio_active = AudioSegment.silent(duration=0)
     audio = AudioSegment.from_file(audio_path)
@@ -95,8 +96,14 @@ def split_audio_vad(audio_path, target_dir, split_seconds=10):
     os.makedirs(wavs_folder, exist_ok=True)
     start_time = 0.
     count = 0
-    while start_time < audio_dur:
-        end_time = min(start_time + split_seconds, audio_dur)
+    num_splits = int(np.round(audio_dur / split_seconds))
+    assert num_splits > 0, 'input audio is too short'
+    interval = audio_dur / num_splits
+
+    for i in range(num_splits):
+        end_time = min(start_time + interval, audio_dur)
+        if i == num_splits - 1:
+            end_time = audio_dur
         output_file = f"{wavs_folder}/{audio_name}_seg{count}.wav"
         audio_seg = audio_active[int(start_time * 1000): int(end_time * 1000)]
         audio_seg.export(output_file, format='wav')
@@ -129,3 +136,4 @@ def get_se(audio_path, vc_model, target_dir='processed', vad=True):
         raise NotImplementedError('No audio segments found!')
     
     return vc_model.extract_se(audio_segs, se_save_path=se_path), audio_name
+
