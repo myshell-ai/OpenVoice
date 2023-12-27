@@ -78,8 +78,8 @@ There are many single or multi-speaker TTS methods that can generate natural spe
 - [x] Tone color converter model
 - [x] Multi-style base speaker model
 - [x] Multi-style and multi-lingual demo
-- [ ] Base speaker model in other languages
-- [ ] EN base speaker model with better naturalness
+- [x] Base speaker model in other languages
+- [x] EN base speaker model with better naturalness
 
 
 ## Citation
