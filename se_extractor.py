@@ -4,7 +4,7 @@ import torch
 from glob import glob
 from pydub import AudioSegment
 from faster_whisper import WhisperModel
-from whisper_timestamped.transcribe import get_audio_tensor, remove_non_speech, get_vad_segments
+from whisper_timestamped.transcribe import get_audio_tensor, get_vad_segments
 
 model_size = "medium"
 # Run on GPU with FP16
