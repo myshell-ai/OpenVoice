@@ -46,7 +46,7 @@ OpenVoice has been powering the instant voice cloning capability of [myshell.ai]
 
 ## Disclaimer
 
-This is an open-source implementation that approximates the performance of the internal voice clone technology of [myshell.ai](https://app.myshell.ai/explore). The online version in myshell.ai has better 1) audio quality, 2) voice cloning similarity, 3) speech naturalness and 4) computational efficiency.
+This is a implementation that approximates the performance of the internal voice clone technology of [myshell.ai](https://app.myshell.ai/explore). The online version in myshell.ai has better 1) audio quality, 2) voice cloning similarity, 3) speech naturalness and 4) computational efficiency.
 
 ## Installation
 Clone this repo, and run
@@ -97,4 +97,4 @@ This repository is licensed under a Creative Commons Attribution-NonCommercial 4
 
 
 ## Acknowledgements
-This open-source implementation is based on several open-source projects, [TTS](https://github.com/coqui-ai/TTS), [VITS](https://github.com/jaywalnut310/vits), and [VITS2](https://github.com/daniilrobnikov/vits2). Thanks for their awesome work!
+This implementation is based on several excellent projects, [TTS](https://github.com/coqui-ai/TTS), [VITS](https://github.com/jaywalnut310/vits), and [VITS2](https://github.com/daniilrobnikov/vits2). Thanks for their awesome work!
