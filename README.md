@@ -41,7 +41,7 @@ OpenVoice has been powering the instant voice cloning capability of [myshell.ai]
 <div align="center">
     <a href="https://www.lepton.ai/playground/openvoice"><img src="resources/lepton.jpg"></a>
     &nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="https://app.myshell.ai/explore"><img src="resources/myshell.jpg"></a>
+    <a href="https://app.myshell.ai/bot/z6Bvua/1702636181"><img src="resources/myshell.jpg"></a>
 </div>
 
 ## Disclaimer
