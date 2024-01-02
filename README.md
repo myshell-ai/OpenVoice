@@ -50,7 +50,7 @@ OpenVoice has been powering the instant voice cloning capability of [myshell.ai]
 
 ## Disclaimer
 
-This is a implementation that approximates the performance of the internal voice clone technology of [myshell.ai](https://app.myshell.ai/explore). The online version in myshell.ai has better 1) audio quality, 2) voice cloning similarity, 3) speech naturalness and 4) computational efficiency.
+This is an implementation that approximates the performance of the internal voice clone technology of [myshell.ai](https://app.myshell.ai/explore). The online version in myshell.ai has better 1) audio quality, 2) voice cloning similarity, 3) speech naturalness and 4) computational efficiency.
 
 ## Installation
 Clone this repo, and run
