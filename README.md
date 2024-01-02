@@ -27,7 +27,7 @@ Neither of the language of the generated speech nor the language of the referenc
 
 <div align="center">
   <div>&nbsp;</div>
-    <img src="resources/framework.jpg" width="800"/>
+    <img src="resources/framework-ipa.png" width="800"/>
   <div>&nbsp;</div>
 </div>
 
