@@ -7,7 +7,6 @@
 
 </div>
 
-## Call To Action
 Join our [Discord community](https://discord.gg/myshell) and select the `Developer` role upon joining to gain exclusive access to our developer-only channel! Don't miss out on valuable discussions and collaboration opportunities.
 
 ## Introduction
