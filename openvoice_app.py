@@ -266,14 +266,11 @@ with gr.Blocks(analytics_enabled=False) as demo:
             )
             ref_gr = gr.Audio(
                 label="Reference Audio",
-                info="Click on the ✎ button to upload your own target speaker audio",
                 type="filepath",
                 value="resources/demo_speaker0.mp3",
             )
             mic_gr = gr.Audio(
-                source="microphone",
                 type="filepath",
-                info="Use your microphone to record audio",
                 label="Use Microphone for Reference",
             )
             use_mic_gr = gr.Checkbox(
