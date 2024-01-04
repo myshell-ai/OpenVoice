@@ -70,13 +70,10 @@ Please see [`demo_part1.ipynb`](demo_part1.ipynb) for an example usage of how Op
 **2. Cross-Lingual Voice Cloning.**
 Please see [`demo_part2.ipynb`](demo_part2.ipynb) for an example for languages seen or unseen in the MSML training set.
 
-**3. Gradio Demo.**
-Launch a local gradio demo with [`python -m openvoice_app --share`](openvoice_app.py). 
-
-**4. Advanced Usage.**
+**3. Advanced Usage.**
 The base speaker model can be replaced with any model (in any language and style) that the user prefer. Please use the `se_extractor.get_se` function as demonstrated in the demo to extract the tone color embedding for the new base speaker.
 
-**5. Tips to Generate Natural Speech.**
+**4. Tips to Generate Natural Speech.**
 There are many single or multi-speaker TTS methods that can generate natural speech, and are readily available. By simply replacing the base speaker model with the model you prefer, you can push the speech naturalness to a level you desire.
 
 ## Roadmap
