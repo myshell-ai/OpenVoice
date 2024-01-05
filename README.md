@@ -43,14 +43,16 @@ OpenVoice has been powering the instant voice cloning capability of [myshell.ai]
 ## Live Demo
 
 <div align="center">
-    <a href="https://www.lepton.ai/playground/openvoice"><img src="resources/lepton.jpg"></a>
+    <a href="https://www.lepton.ai/playground/openvoice"><img src="resources/lepton-hd.png" height="28"></a>
     &nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="https://app.myshell.ai/bot/z6Bvua/1702636181"><img src="resources/myshell.jpg"></a>
+    <a href="https://app.myshell.ai/bot/z6Bvua/1702636181"><img src="resources/myshell-hd.png" height="28"></a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://huggingface.co/spaces/myshell-ai/OpenVoice"><img src="resources/huggingface.png" height="32"></a>
 </div>
 
 ## Disclaimer
 
-This is a implementation that approximates the performance of the internal voice clone technology of [myshell.ai](https://app.myshell.ai/explore). The online version in myshell.ai has better 1) audio quality, 2) voice cloning similarity, 3) speech naturalness and 4) computational efficiency.
+This is an implementation that approximates the performance of the internal voice clone technology of [myshell.ai](https://app.myshell.ai/explore). The online version in myshell.ai has better 1) audio quality, 2) voice cloning similarity, 3) speech naturalness and 4) computational efficiency.
 
 ## Installation
 Clone this repo, and run
@@ -69,6 +71,8 @@ Please see [`demo_part1.ipynb`](demo_part1.ipynb) for an example usage of how Op
 
 **2. Cross-Lingual Voice Cloning.**
 Please see [`demo_part2.ipynb`](demo_part2.ipynb) for an example for languages seen or unseen in the MSML training set.
+
+**3. Gradio Demo.**. We provide a minimalist local gradio demo here. We strongly suggest the users to look into `demo_part1.ipynb`, `demo_part2.ipynb` and the [QnA](QA.md) if they run into issues with the gradio demo. Launch a local gradio demo with `python -m openvoice_app --share`.
 
 **3. Advanced Usage.**
 The base speaker model can be replaced with any model (in any language and style) that the user prefer. Please use the `se_extractor.get_se` function as demonstrated in the demo to extract the tone color embedding for the new base speaker.
