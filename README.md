@@ -50,6 +50,10 @@ OpenVoice has been powering the instant voice cloning capability of [myshell.ai]
     <a href="https://huggingface.co/spaces/myshell-ai/OpenVoice"><img src="resources/huggingface.png" height="32"></a>
 </div>
 
+## Common Issues
+
+Please see [QnA](QA.md) for common questions and answers. We will regularly update the question and answer list.
+
 ## Disclaimer
 
 This is an implementation that approximates the performance of the internal voice clone technology of [myshell.ai](https://app.myshell.ai/explore). The online version in myshell.ai has better 1) audio quality, 2) voice cloning similarity, 3) speech naturalness and 4) computational efficiency.
