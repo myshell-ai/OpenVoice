@@ -1,4 +1,4 @@
-<div align="center">
+  <div align="center">
   <div>&nbsp;</div>
   <img src="resources/openvoicelogo.jpg" width="400"/> 
 
@@ -20,7 +20,7 @@ OpenVoice can accurately clone the reference tone color and generate speech in m
 **2. Flexible Voice Style Control.**
 OpenVoice enables granular control over voice styles, such as emotion and accent, as well as other style parameters including rhythm, pauses, and intonation. 
 
-**3. Zero-shot Cross-lingual Voice Cloning.**
+**3. Zero-shot Cross-lingual Voice Cloning.***
 Neither of the language of the generated speech nor the language of the reference speech needs to be presented in the massive-speaker multi-lingual training dataset.
 
 [Video](https://github.com/myshell-ai/OpenVoice/assets/40556743/3cba936f-82bf-476c-9e52-09f0f417bb2f)
