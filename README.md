@@ -48,6 +48,9 @@ OpenVoice has been powering the instant voice cloning capability of [myshell.ai]
     <a href="https://app.myshell.ai/bot/z6Bvua/1702636181"><img src="resources/myshell-hd.png" height="28"></a>
     &nbsp;&nbsp;&nbsp;&nbsp;
     <a href="https://huggingface.co/spaces/myshell-ai/OpenVoice"><img src="resources/huggingface.png" height="32"></a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://replicate.com/stability-ai/stable-diffusion"><img src="https://replicate.com/stability-ai/stable-diffusion/badge" height="26"></a>
+
 </div>
 
 ## Common Issues
