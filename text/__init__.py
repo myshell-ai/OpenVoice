@@ -61,12 +61,9 @@ def cleaned_text_to_sequence_vits2(cleaned_text, tones, language, symbols, langu
     return phones, tones, lang_ids
 
 
-def sequence_to_text(sequence):
+def sequence_to_text(sequence,_id_to_symbol):
   '''Converts a sequence of IDs back to a string'''
-  result = ''
-  for symbol_id in sequence:
-    s = _id_to_symbol[symbol_id]
-    result += s
+  result = ''.join(_id_to_symbol[symbol_id] for symbol_id in sequence)
   return result
 
 
