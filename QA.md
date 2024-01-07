@@ -1,11 +1,14 @@
 # Common Questions and Answers
 
+## General Comments
+
+**OpenVoice is a technology, not a product.** Do not expect it to work perfectly on every case, as it takes a lot of engineering effort to translate a technology to a stable product. The targeted users of this technology is developers and researchers, not end users. End users need a perfect product. However, we are confident to say that OpenVoice is in tier-1 among the source-available voice cloning technologies. 
 
 ## Issues with Voice Quality
 
-**Accent of the Generated Voice is not Similar to the Reference Voice**
+**Accent and Emotion of the Generated Voice is not Similar to the Reference Voice**
 
-First of all, OpenVoice only clones the tone color of the reference speaker. It does NOT clone the accent. The accent is controlled by the base speaker TTS model, not cloned by the tone color converter (please refer to our [paper](https://arxiv.org/pdf/2312.01479.pdf) for technical details). If the user wants to change the accent of the output, they need to have a base speaker model with that accent. OpenVoice provides sufficient flexibility for users to integrate their own base speaker model into the framework by simply replacing the current base speaker we provided.
+First of all, OpenVoice only clones the tone color of the reference speaker. It does NOT clone the accent or emotion. The accent and emotion is controlled by the base speaker TTS model, not cloned by the tone color converter (please refer to our [paper](https://arxiv.org/pdf/2312.01479.pdf) for technical details). If the user wants to change the accent or emotion of the output, they need to have a base speaker model with that accent. OpenVoice provides sufficient flexibility for users to integrate their own base speaker model into the framework by simply replacing the current base speaker we provided.
 
 **Bad Audio Quality of the Generated Speech** 
 
