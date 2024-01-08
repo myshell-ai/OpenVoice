@@ -14,7 +14,11 @@ args = parser.parse_args()
 en_ckpt_base = 'checkpoints/base_speakers/EN'
 zh_ckpt_base = 'checkpoints/base_speakers/ZH'
 ckpt_converter = 'checkpoints/converter'
-device = 'cuda' if torch.cuda.is_available() else 'cpu'
+device = 'cpu'
+if torch.cuda.is_available():
+    device = 'cuda'
+if torch.backends.mps.is_available():
+    device = 'mps'
 output_dir = 'outputs'
 os.makedirs(output_dir, exist_ok=True)
 

@@ -52,7 +52,7 @@ OpenVoice has been powering the instant voice cloning capability of [myshell.ai]
 
 ## Common Issues
 
-Please see [QnA](QA.md) for common questions and answers. We will regularly update the question and answer list.
+Please see [Q&A](QA.md) for common questions and answers. We will regularly update the question and answer list.
 
 ## Installation
 Clone this repo, and run
@@ -62,7 +62,24 @@ conda activate openvoice
 conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia
 pip install -r requirements.txt
 ```
-Download the checkpoint from [here](https://myshell-public-repo-hosting.s3.amazonaws.com/checkpoints_1226.zip) and extract it to the `checkpoints` folder 
+Download the checkpoint from [here](https://myshell-public-repo-hosting.s3.amazonaws.com/checkpoints_1226.zip) and extract it to the `checkpoints` folder
+
+## Apple Silicon (MPS) Support
+
+Apple Silicon (MPS) GPUs are partially supported, however not all operations are available due to the lack of complete MPS support in PyTorch.
+
+Until full MPS support has been added to PyTorch, please prepend all your commands with:
+
+```bash
+PYTORCH_ENABLE_MPS_FALLBACK=1 python ***.py
+```
+
+Or, in Python:
+
+```python
+import os
+os.environ["PYTORCH_ENABLE_MPS_FALLBACK"] = "1"
+```
 
 ## Usage
 

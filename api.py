@@ -14,9 +14,17 @@ from models import SynthesizerTrn
 class OpenVoiceBaseClass(object):
     def __init__(self, 
                 config_path, 
-                device='cuda:0'):
+                device=None):
+        if device == None:
+            device = 'cpu'
+            if torch.cuda.is_available():
+                device = 'cuda'
+            if torch.backends.mps.is_available():
+                device = 'mps'
         if 'cuda' in device:
             assert torch.cuda.is_available()
+        if 'mps' in device:
+            assert torch.backends.mps.is_available()
 
         hps = utils.get_hparams_from_file(config_path)
 
