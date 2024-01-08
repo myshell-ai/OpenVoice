@@ -2,7 +2,11 @@
 
 ## General Comments
 
-**OpenVoice is a technology, not a product.** Do not expect it to work perfectly on every case, as it takes a lot of engineering effort to translate a technology to a stable product. The targeted users of this technology are developers and researchers, not end users. End users need a perfect product. However, we are confident to say that OpenVoice is in tier-1 among the source-available voice cloning technologies. 
+**OpenVoice is a Technology, not a Product**
+
+Although it works on a majority of voices if used correctly, please do not expect it to work perfectly on every case, as it takes a lot of engineering effort to translate a technology to a stable product. The targeted users of this technology are developers and researchers, not end users. End users expects a perfect product. However, we are confident to say that OpenVoice is the state-of-the-art among the source-available voice cloning technologies.
+
+The contribution of OpenVoice is a versatile instant voice cloning technical approach, not a ready-to-use perfect voice cloning product. However, we firmly believe that by releasing OpenVoice, we can accelerate the open research community's progress on instant voice cloning, and someday in the future the free voice cloning methods will be as good as commercial ones.
 
 ## Issues with Voice Quality
 
