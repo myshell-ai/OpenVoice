@@ -128,7 +128,7 @@ def merge_short_sentences_latin(sens):
     """
     sens_out = []
     for s in sens:
-        # If the previous sentense is too short, merge them with
+        # If the previous sentence is too short, merge them with
         # the current sentence.
         if len(sens_out) > 0 and len(sens_out[-1].split(" ")) <= 2:
             sens_out[-1] = sens_out[-1] + " " + s
