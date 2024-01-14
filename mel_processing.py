@@ -68,7 +68,6 @@ def spectrogram_torch(y, n_fft, sampling_rate, hop_size, win_size, center=False)
         pad_mode="reflect",
         normalized=False,
         onesided=True,
-        return_complex=False,
     )
 
     spec = torch.sqrt(spec.pow(2).sum(-1) + 1e-6)
@@ -92,7 +91,7 @@ def spectrogram_torch_conv(y, n_fft, sampling_rate, hop_size, win_size, center=F
     # ******************** original ************************#
     # y = y.squeeze(1)
     # spec1 = torch.stft(y, n_fft, hop_length=hop_size, win_length=win_size, window=hann_window[wnsize_dtype_device],
-    #                   center=center, pad_mode='reflect', normalized=False, onesided=True, return_complex=False)
+    #                   center=center, pad_mode='reflect', normalized=False, onesided=True)
 
     # ******************** ConvSTFT ************************#
     freq_cutoff = n_fft // 2 + 1
@@ -112,7 +111,7 @@ def spectrogram_torch_conv(y, n_fft, sampling_rate, hop_size, win_size, center=F
 
     # ******************** Verification ************************#
     spec1 = torch.stft(y.squeeze(1), n_fft, hop_length=hop_size, win_length=win_size, window=hann_window[wnsize_dtype_device],
-                      center=center, pad_mode='reflect', normalized=False, onesided=True, return_complex=False)
+                      center=center, pad_mode='reflect', normalized=False, onesided=True)
     assert torch.allclose(spec1, spec2, atol=1e-4)
 
     spec = torch.sqrt(spec2.pow(2).sum(-1) + 1e-6)
@@ -172,7 +171,6 @@ def mel_spectrogram_torch(
         pad_mode="reflect",
         normalized=False,
         onesided=True,
-        return_complex=False,
     )
 
     spec = torch.sqrt(spec.pow(2).sum(-1) + 1e-6)

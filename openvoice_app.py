@@ -245,7 +245,6 @@ with gr.Blocks(analytics_enabled=False) as demo:
             )
             ref_gr = gr.Audio(
                 label="Reference Audio",
-                info="Click on the ✎ button to upload your own target speaker audio",
                 type="filepath",
                 value="resources/demo_speaker2.mp3",
             )
