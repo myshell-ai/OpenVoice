@@ -54,7 +54,7 @@ OpenVoice has been powering the instant voice cloning capability of [myshell.ai]
 
 Please see [QnA](QA.md) for common questions and answers. We will regularly update the question and answer list.
 
-## Installation
+## Linux Installation
 Clone this repo, and run
 ```
 conda create -n openvoice python=3.9
