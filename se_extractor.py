@@ -8,18 +8,12 @@ from glob import glob
 import numpy as np
 from pydub import AudioSegment
 from faster_whisper import WhisperModel
-import hashlib
-import base64
-import librosa
-from whisper_timestamped.transcribe import get_audio_tensor, get_vad_segments
 
 model_size = "medium"
 # Run on GPU with FP16
 model = None
 def split_audio_whisper(audio_path, audio_name, target_dir='processed'):
     global model
-    if model is None:
-        model = WhisperModel(model_size, device="cuda", compute_type="float16")
     audio = AudioSegment.from_file(audio_path)
     max_len = len(audio)
 
@@ -75,17 +69,16 @@ def split_audio_whisper(audio_path, audio_name, target_dir='processed'):
 
 
 def split_audio_vad(audio_path, audio_name, target_dir, split_seconds=10.0):
-    SAMPLE_RATE = 16000
-    audio_vad = get_audio_tensor(audio_path)
-    segments = get_vad_segments(
-        audio_vad,
-        output_sample=True,
-        min_speech_duration=0.1,
-        min_silence_duration=1,
-        method="silero",
+    global model
+    segments, _ = model.transcribe(
+        audio_path,
+        vad_filter=True,
+        vad_parameters=dict(
+            min_speech_duration_ms=100,
+            min_silence_duration_ms=1000
+        ),
     )
-    segments = [(seg["start"], seg["end"]) for seg in segments]
-    segments = [(float(s) / SAMPLE_RATE, float(e) / SAMPLE_RATE) for s,e in segments]
+    segments = [(seg.start, seg.end) for seg in segments]
     print(segments)
     audio_active = AudioSegment.silent(duration=0)
     audio = AudioSegment.from_file(audio_path)
@@ -127,6 +120,11 @@ def hash_numpy_array(audio_path):
     return base64_value.decode('utf-8')[:16].replace('/', '_^')
 
 def get_se(audio_path, vc_model, target_dir='processed', vad=True):
+    global model
+    if model is None:
+        device = "cuda" if torch.cuda.is_available() else "cpu"
+        compute_type = "float16" if device == "cuda" else "int8"
+        model = WhisperModel(model_size, device=device, compute_type=compute_type)
     device = vc_model.device
 
     audio_name = f"{os.path.basename(audio_path).rsplit('.', 1)[0]}_{hash_numpy_array(audio_path)}"
