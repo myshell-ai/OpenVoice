@@ -12,13 +12,13 @@ For most users, the most convenient way is to directly use the free TTS and Inst
 ### TTS
 Go to [https://app.myshell.ai/explore](https://app.myshell.ai/explore) and follow the instructions below:
 <div align="center">
-  <img src="../resources/tts-guide.png" width="600"/> 
+  <img src="../resources/tts-guide.png" width="1200"/> 
 </div>
 
 ### Voice Clone
 Go to [https://app.myshell.ai/explore](https://app.myshell.ai/explore) and follow the instructions below:
 <div align="center">
-  <img src="../resources/voice-clone-guide.png" width="600"/> 
+  <img src="../resources/voice-clone-guide.png" width="61200"/> 
 </div>
 
 ## Minimal Demo
