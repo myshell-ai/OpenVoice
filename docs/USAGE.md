@@ -1,9 +1,9 @@
 # Usage
 
 ## Table of Content
-- [Use in MyShell](): directly use the Instant Voice Clone and TTS services.
-- [Minimal Demo](): quickly try OpenVoice and do not require high quality.
-- [Linux Install](): for researchers and developers only.
+- [Use in MyShell](#use-in-myshell): directly use the Instant Voice Clone and TTS services.
+- [Minimal Demo](#minimal-demo): quickly try OpenVoice and do not require high quality.
+- [Linux Install](#linux-install): for researchers and developers only.
 
 ## Use in MyShell
 
