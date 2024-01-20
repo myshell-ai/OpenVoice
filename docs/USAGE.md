@@ -42,10 +42,10 @@ pip install -r requirements.txt
 Download the checkpoint from [here](https://myshell-public-repo-hosting.s3.amazonaws.com/checkpoints_1226.zip) and extract it to the `checkpoints` folder 
 
 **1. Flexible Voice Style Control.**
-Please see [`demo_part1.ipynb`](demo_part1.ipynb) for an example usage of how OpenVoice enables flexible style control over the cloned voice.
+Please see [`demo_part1.ipynb`](../demo_part1.ipynb) for an example usage of how OpenVoice enables flexible style control over the cloned voice.
 
 **2. Cross-Lingual Voice Cloning.**
-Please see [`demo_part2.ipynb`](demo_part2.ipynb) for an example for languages seen or unseen in the MSML training set.
+Please see [`demo_part2.ipynb`](../demo_part2.ipynb) for an example for languages seen or unseen in the MSML training set.
 
 **3. Gradio Demo.**. We provide a minimalist local gradio demo here. We strongly suggest the users to look into `demo_part1.ipynb`, `demo_part2.ipynb` and the [QnA](QA.md) if they run into issues with the gradio demo. Launch a local gradio demo with `python -m openvoice_app --share`.
 
