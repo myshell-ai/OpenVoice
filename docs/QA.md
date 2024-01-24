@@ -17,7 +17,7 @@ First of all, OpenVoice only clones the tone color of the reference speaker. It 
 **Bad Audio Quality of the Generated Speech** 
 
 Please check the followings:
-- Is your reference audio is clean enough without any background noise?
+- Is your reference audio is clean enough without any background noise? You can find some high-quality reference speech [here](https://aiartes.com/voiceai)
 - Is your audio too short?
 - Does your audio contain speech from more than one person?
 - Does the reference audio contain long blank sections?
