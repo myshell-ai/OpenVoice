@@ -36,7 +36,7 @@ This section is only for developers and researchers who are familiar with Linux,
 ```
 conda create -n openvoice python=3.9
 conda activate openvoice
-conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia
+conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda==11.7 -c pytorch -c nvidia
 pip install -r requirements.txt
 ```
 Download the checkpoint from [here](https://myshell-public-repo-hosting.s3.amazonaws.com/checkpoints_1226.zip) and extract it to the `checkpoints` folder 
