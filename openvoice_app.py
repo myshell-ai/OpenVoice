@@ -41,7 +41,7 @@ en_source_style_se = torch.load(f'{en_ckpt_base}/en_style_se.pth').to(device)
 zh_source_se = torch.load(f'{zh_ckpt_base}/zh_default_se.pth').to(device)
 
 # This online demo mainly supports English and Chinese
-supported_languages = ['zh', 'en', 'hi']
+supported_languages = ['zh', 'en']
 
 
 def predict(prompt, style, audio_file_pth, use_mic, mic_file_path):
@@ -190,7 +190,7 @@ with gr.Blocks(analytics_enabled=False) as demo:
         with gr.Column():
             input_text_gr = gr.Textbox(
                 label="Text Prompt",
-                info="One or two sentences at a time is better. Up to 200 text characters.",
+                info="One or two sentences at a time is better.",
                 value="He hoped there would be stew for dinner, turnips and carrots and bruised potatoes and fat mutton pieces to be ladled out in thick, peppered, flour-fattened sauce.",
             )
             style_gr = gr.Dropdown(
