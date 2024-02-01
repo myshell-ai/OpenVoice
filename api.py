@@ -52,13 +52,7 @@ class OpenVoiceBaseClass(object):
 class BaseSpeakerTTS(OpenVoiceBaseClass):
     language_marks = {
         "english": "EN",
-        "chinese": "ZH",
-        "hindi": "HI",
-        "japanese": "JA",
-        "korean": "KO",
-        "spanish": "ES",
-        "french": "FR",
-        "portuguese": "PT"
+        "chinese": "ZH"
     }
 
     @staticmethod
