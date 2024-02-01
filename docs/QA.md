@@ -28,3 +28,11 @@ Please check the followings:
 **Support of Other Languages**
 
 For multi-lingual and cross-lingual usage, please refer to [`demo_part2.ipynb`](https://github.com/myshell-ai/OpenVoice/blob/main/demo_part2.ipynb). OpenVoice supports any language as long as you have a base speaker in that language. The OpenVoice team already did the most difficult part (tone color converter training) for you. Base speaker TTS model is relatively easy to train, and multiple existing open-source repositories support it. If you don't want to train by yourself, simply use the OpenAI TTS model as the base speaker.
+
+## Issues with Installation
+**Error related to silero**
+When calling the get_vad_segments in se_extractor.py, there should be a message like:
+```
+Downloading: "https://github.com/snakers4/silero-vad/zipball/master" to /home/user/.cache/torch/hub/master.zip
+```
+The download would fail if your machine can not access github. Please download the zip from "https://github.com/snakers4/silero-vad/zipball/master" manually and unzip it to `/home/user/.cache/torch/hub/snakers4_silero-vad_master`. You can also see [this issue](https://github.com/myshell-ai/OpenVoice/issues/57) for solutions of other versions of silero.
