@@ -46,7 +46,6 @@ class OpenVoiceBaseClass(object):
         a, b = self.model.load_state_dict(
             checkpoint_dict['model'], strict=False)
         print("Loaded checkpoint '{}'".format(ckpt_path))
-        print('missing/unexpected keys:', a, b)
 
 
 class BaseSpeakerTTS(OpenVoiceBaseClass):
