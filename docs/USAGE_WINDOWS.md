@@ -16,7 +16,7 @@
 5. To verify that Visual Studio Code is installed correctly, you can run the following command in the command prompt: `code --version`. It should display something like "1.86.0".
 6. Congratulations, you have successfully installed Visual Studio Code via Microsoft Store. You can now use it to edit and debug code in various languages and frameworks. 💻
 
-# How to install openvoice from GitHub using Visual Studio Code terminal
+# How to install OpenVoice from GitHub using Visual Studio Code terminal
 
 1. Launch Visual Studio Code and open a folder where you want to store the openvoice project. You can use the File > Open Folder menu command.
 2. Open the integrated terminal in Visual Studio Code by using the Terminal > New Terminal menu command. Make sure that the terminal shows the same folder name as the one you opened in the previous step. If not, you can use the cd command to change the directory.
