@@ -67,4 +67,4 @@ There are many single or multi-speaker TTS methods that can generate natural spe
 
 ## Windows Install (VS Code)
 
-Please use [this guide](https://github.com/Alienpups/OpenVoice/blob/main/docs/USAGE_WINDOWS.md) if you want to install and use OpenVoice on Windows
+Please use [this guide](https://github.com/Alienpups/OpenVoice/blob/main/docs/USAGE_WINDOWS.md) if you want to install and use OpenVoice on Windows.
