@@ -1,6 +1,6 @@
 from setuptools import setup
 
-setup(name='MyShell - OpenVoice',
+setup(name='MyShell-OpenVoice',
       version='0.0.0',
       description='Instant voice cloning by MyShell.',
       long_description=open('README.md').read().strip(),
