@@ -35,7 +35,7 @@ zh_source_se = torch.load(f'{zh_ckpt_base}/zh_default_se.pth').to(device)
 supported_languages = ['zh', 'en']
 
 def predict(prompt, style, audio_file_pth, agree):
-    # initialize a empty info
+    # initialize an empty info
     text_hint = ''
     # agree with the terms
     if agree == False:
