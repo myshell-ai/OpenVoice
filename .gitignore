@@ -6,3 +6,6 @@ checkpoints
 trash
 examples*
 .env
+build
+*.egg-info/
+*.zip
