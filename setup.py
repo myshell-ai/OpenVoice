@@ -22,7 +22,8 @@ setup(name='MyShell-OpenVoice',
       author_email='ethan@myshell.ai',
       license='Creative Commons Attribution-NonCommercial 4.0 International Public License',
       packages=[
-          'openvoice'
+          'openvoice',
+          'openvoice.text'
       ],
       python_requires='>=3.9',
       install_requires=[
