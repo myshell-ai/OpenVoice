@@ -50,7 +50,7 @@ cd OpenVoice
 pip install -e .
 ```
 
-Download the checkpoint from [here](https://myshell-public-repo-hosting.s3.amazonaws.com/openvoice/checkpoints_1226.zip) and extract it to the `checkpoints` folder
+Download the checkpoint from [here](https://myshell-public-repo-hosting.s3.amazonaws.com/openvoice/checkpoints_1226.zip) and extract it in the repository root. It contains the `checkpoints` folder.
 
 **1. Flexible Voice Style Control.**
 Please see [`demo_part1.ipynb`](../demo_part1.ipynb) for an example usage of how OpenVoice enables flexible style control over the cloned voice.
@@ -58,7 +58,7 @@ Please see [`demo_part1.ipynb`](../demo_part1.ipynb) for an example usage of how
 **2. Cross-Lingual Voice Cloning.**
 Please see [`demo_part2.ipynb`](../demo_part2.ipynb) for an example for languages seen or unseen in the MSML training set.
 
-**3. Gradio Demo.**. We provide a minimalist local gradio demo here. We strongly suggest the users to look into `demo_part1.ipynb`, `demo_part2.ipynb` and the [QnA](QA.md) if they run into issues with the gradio demo. Launch a local gradio demo with `python -m openvoice_app --share`.
+**3. Gradio Demo.**. We provide a minimalist local gradio demo here. We strongly suggest the users to look into `demo_part1.ipynb`, `demo_part2.ipynb` and the [QnA](QA.md) if they run into issues with the gradio demo. Launch a local gradio demo with `PYTHONPATH=$PYTHONPATH:$(pwd)/openvoice python -m openvoice_app --share`.
 
 **3. Advanced Usage.**
 The base speaker model can be replaced with any model (in any language and style) that the user prefer. Please use the `se_extractor.get_se` function as demonstrated in the demo to extract the tone color embedding for the new base speaker.
