@@ -420,6 +420,7 @@ class SynthesizerTrn(nn.Module):
         upsample_kernel_sizes,
         n_speakers=256,
         gin_channels=256,
+        zero_g=False,
         **kwargs
     ):
         super().__init__()
@@ -461,6 +462,7 @@ class SynthesizerTrn(nn.Module):
             self.sdp = StochasticDurationPredictor(hidden_channels, 192, 3, 0.5, 4, gin_channels=gin_channels)
             self.dp = DurationPredictor(hidden_channels, 256, 3, 0.5, gin_channels=gin_channels)
             self.emb_g = nn.Embedding(n_speakers, gin_channels)
+        self.zero_g = zero_g
 
     def infer(self, x, x_lengths, sid=None, noise_scale=1, length_scale=1, noise_scale_w=1., sdp_ratio=0.2, max_len=None):
         x, m_p, logs_p, x_mask = self.enc_p(x, x_lengths)
@@ -490,8 +492,8 @@ class SynthesizerTrn(nn.Module):
     def voice_conversion(self, y, y_lengths, sid_src, sid_tgt, tau=1.0):
         g_src = sid_src
         g_tgt = sid_tgt
-        z, m_q, logs_q, y_mask = self.enc_q(y, y_lengths, g=g_src, tau=tau)
+        z, m_q, logs_q, y_mask = self.enc_q(y, y_lengths, g=g_src if not self.zero_g else torch.zeros_like(g_src), tau=tau)
         z_p = self.flow(z, y_mask, g=g_src)
         z_hat = self.flow(z_p, y_mask, g=g_tgt, reverse=True)
-        o_hat = self.dec(z_hat * y_mask, g=g_tgt)
+        o_hat = self.dec(z_hat * y_mask, g=g_tgt if not self.zero_g else torch.zeros_like(g_tgt))
         return o_hat, y_mask, (z, z_p, z_hat)

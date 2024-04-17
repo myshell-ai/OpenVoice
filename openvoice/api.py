@@ -107,6 +107,7 @@ class ToneColorConverter(OpenVoiceBaseClass):
             self.watermark_model = wavmark.load_model().to(self.device)
         else:
             self.watermark_model = None
+        self.version = getattr(self.hps, '_version_', "v1")
 
 
 
