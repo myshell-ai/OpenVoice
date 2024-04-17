@@ -2,7 +2,9 @@ __pycache__/
 .ipynb_checkpoints/
 processed
 outputs
+outputs_v2
 checkpoints
+checkpoints_v2
 trash
 examples*
 .env
