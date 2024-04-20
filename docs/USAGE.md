@@ -26,8 +26,6 @@ For most users, the most convenient way is to directly use the free TTS and Inst
 For users who want to quickly try OpenVoice and do not require high quality or stability, click any of the following links:
 
 <div align="center">
-    <a href="https://www.lepton.ai/playground/openvoice"><img src="../resources/lepton-hd.png" height="28"></a>
-    &nbsp;&nbsp;&nbsp;&nbsp;
     <a href="https://app.myshell.ai/bot/z6Bvua/1702636181"><img src="../resources/myshell-hd.png" height="28"></a>
     &nbsp;&nbsp;&nbsp;&nbsp;
     <a href="https://huggingface.co/spaces/myshell-ai/OpenVoice"><img src="../resources/huggingface.png" height="32"></a>
