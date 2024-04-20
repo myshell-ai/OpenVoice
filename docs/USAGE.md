@@ -2,31 +2,24 @@
 
 ## Table of Content
 
-- [Use in MyShell](#use-in-myshell): directly use the Instant Voice Clone and TTS services.
-- [Minimal Demo](#minimal-demo): quickly try OpenVoice and do not require high quality.
+- [Quick Use](#quick-use): directly use OpenVoice without installation.
 - [Linux Install](#linux-install): for researchers and developers only.
     - [V1](#openvoice-v1)
     - [V2](#openvoice-v2)
 
-## Use in MyShell
+## Quick Use
 
 For most users, the most convenient way is to directly use the free TTS and Instant Voice Clone services in MyShell.
 
-### TTS
-
-Go to [https://app.myshell.ai/explore](https://app.myshell.ai/explore) and follow the instructions below:
-
-<div align="center">
-  <img src="../resources/tts-guide.png" width="1200"/> 
-</div>
-
-### Voice Clone
-
-Go to [https://app.myshell.ai/explore](https://app.myshell.ai/explore) and follow the instructions below:
-
-<div align="center">
-  <img src="../resources/voice-clone-guide.png" width="61200"/> 
-</div>
+- [British English](https://app.myshell.ai/widget/vYjqae)
+- [American English](https://app.myshell.ai/widget/eIRjAf)
+- [Indian English](https://app.myshell.ai/widget/V3iYze)
+- [Australian English](https://app.myshell.ai/widget/fM7JVf)
+- [Spanish](https://app.myshell.ai/widget/NNFFVz)
+- [French](https://app.myshell.ai/widget/z2uyUz)
+- [Chinese](https://app.myshell.ai/widget/fU7nUz)
+- [Japanese](https://app.myshell.ai/widget/IfIB3u)
+- [Korean](https://app.myshell.ai/widget/q6ZjIn)
 
 ## Minimal Demo
 
