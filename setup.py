@@ -20,7 +20,7 @@ setup(name='MyShell-OpenVoice',
       },
       author='MyShell',
       author_email='ethan@myshell.ai',
-      license='Creative Commons Attribution-NonCommercial 4.0 International Public License',
+      license='MIT License',
       packages=[
           'openvoice'
       ],
