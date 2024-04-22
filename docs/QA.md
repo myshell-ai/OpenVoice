@@ -37,3 +37,23 @@ When calling `get_vad_segments` from `se_extractor.py`, there should be a messag
 Downloading: "https://github.com/snakers4/silero-vad/zipball/master" to /home/user/.cache/torch/hub/master.zip
 ```
 The download would fail if your machine can not access github. Please download the zip from "https://github.com/snakers4/silero-vad/zipball/master" manually and unzip it to `/home/user/.cache/torch/hub/snakers4_silero-vad_master`. You can also see [this issue](https://github.com/myshell-ai/OpenVoice/issues/57) for solutions for other versions of silero.
+
+
+
+## Issues with Inputting Data
+**Errors related to OPEN_API_KEY**
+The base speaker is used to produce multi-lingual speech audio, and control the styles and languages. A converter is used to embody the tone color of the reference speaker into the speech. The user can flexibily change the base speaker as needed.
+
+Please create a file named `.env` and place OpenAI key as `OPENAI_API_KEY=xxx` (see `demo_part2.ipynb`).
+
+ To input your own dataset you do no need to change the base speaker or the tone converter, only the reference speaker. 
+
+Here is an example of setting the reference and base speaker variables: 
+base_speaker = f"{output_dir}/openai_source_output.mp3"
+reference_speaker = '/home/user/../OpenVoice/SampleVoice.mp3'
+
+ The cross-lingual capabilities are two-fold:
+• When the language of the reference speaker is unseen in the MSML dataset, the model is able to accurately clone the tone color of the reference speaker.
+• When the language of the generated speech is unseen in the MSML dataset, the model is able to clone the reference voice and speak in that language, as long as the base speaker TTS supports that language.
+
+(See https://arxiv.org/pdf/2312.01479.pdf for more details)
