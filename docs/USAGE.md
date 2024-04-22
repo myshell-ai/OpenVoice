@@ -6,7 +6,7 @@
 - [Linux Install](#linux-install): for researchers and developers only.
     - [V1](#openvoice-v1)
     - [V2](#openvoice-v2)
-- [Install on Other Platforms]
+- [Install on Other Platforms](#install-on-other-platforms): unofficial installation guide contributed by the community
 
 ## Quick Use
 
