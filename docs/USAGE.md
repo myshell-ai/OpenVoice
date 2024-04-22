@@ -50,6 +50,7 @@ No matter if you are using V1 or V2, the above installation is the same.
     git clone git@github.com:myshell-ai/OpenVoice.git
     cd OpenVoice 
     ```
+    
 **2. Create a Python Environment:**
     ```
     conda create -n openvoice python=3.9
