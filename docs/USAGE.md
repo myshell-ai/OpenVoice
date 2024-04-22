@@ -6,10 +6,11 @@
 - [Linux Install](#linux-install): for researchers and developers only.
     - [V1](#openvoice-v1)
     - [V2](#openvoice-v2)
+- [Install on Other Platforms]
 
 ## Quick Use
 
-For most users, the most convenient way is to directly use the free TTS and Instant Voice Clone services in MyShell.
+The input speech audio of OpenVoice can be in **Any Language**. OpenVoice can clone the voice in that speech audio, and use the voice to speak in multiple languages. For quick use, we recommend you to try the already deployed services:
 
 - [British English](https://app.myshell.ai/widget/vYjqae)
 - [American English](https://app.myshell.ai/widget/eIRjAf)
@@ -70,6 +71,13 @@ python -m unidic download
 **Demo Usage.** Please see [`demo_part3.ipynb`](../demo_part3.ipynb) for example usage of OpenVoice V2. Now it natively supports English, Spanish, French, Chinese, Japanese and Korean.
 
 
-## Windows Install (VS Code)
+## Install on Other Platforms
 
-Please use [this guide](https://github.com/Alienpups/OpenVoice/blob/main/docs/USAGE_WINDOWS.md) if you want to install and use OpenVoice on Windows.
+This section provides the unofficial installation guides by open-source contributors in the community:
+
+- Windows
+  - [Guide](https://github.com/Alienpups/OpenVoice/blob/main/docs/USAGE_WINDOWS.md) by [@Alienpups](https://github.com/Alienpups)
+  - You are welcome to contribute if you have a better installation guide. We will list you here.
+- Docker
+  - [Guide](https://github.com/StevenJSCF/OpenVoice/blob/update-docs/docs/DF_USAGE.md) by [@StevenJSCF](https://github.com/StevenJSCF)
+  - You are welcome to contribute if you have a better installation guide. We will list you here.
