@@ -4,8 +4,11 @@
 
 - [Quick Use](#quick-use): directly use OpenVoice without installation.
 - [Linux Install](#linux-install): for researchers and developers only.
-    - [V1](#openvoice-v1)
-    - [V2](#openvoice-v2)
+- [Common Installation Steps (V1 and V2)](#common-installation-steps-v1-and-v2): Installation steps applicable to both OpenVoice V1 and V2.
+- [OpenVoice V1](#openvoice-v1): Installation and usage instructions for OpenVoice V1.
+- [OpenVoice V2](#openvoice-v2): Installation and usage instructions for OpenVoice V2.
+- [Windows Install (VS Code)](#windows-install-vs-code): Installation instructions for Windows users.
+
 
 ## Quick Use
 
@@ -21,6 +24,8 @@ For most users, the most convenient way is to directly use the free TTS and Inst
 - [Japanese](https://app.myshell.ai/widget/IfIB3u)
 - [Korean](https://app.myshell.ai/widget/q6ZjIn)
 
+OpenVoice supports any language as long as you have a base speaker in that language. The OpenVoice team already did the most difficult part (tone color converter training) for you. Base speaker TTS model is relatively easy to train, and multiple existing open-source repositories support it. If you don't want to train by yourself, simply use the OpenAI TTS model as the base speaker.
+
 ## Minimal Demo
 
 For users who want to quickly try OpenVoice and do not require high quality or stability, click any of the following links:
@@ -33,17 +38,33 @@ For users who want to quickly try OpenVoice and do not require high quality or s
 
 ## Linux Install
 
-This section is only for developers and researchers who are familiar with Linux, Python and PyTorch. Clone this repo, and run
+This section is only for developers and researchers who are familiar with Linux, Python, and PyTorch.
 
-```
-conda create -n openvoice python=3.9
-conda activate openvoice
-git clone git@github.com:myshell-ai/OpenVoice.git
-cd OpenVoice
-pip install -e .
-```
+### Common Installation Steps (V1 and V2)
 
 No matter if you are using V1 or V2, the above installation is the same.
+
+**1. Clone the Repository:**
+    ```
+    bash
+    git clone git@github.com:myshell-ai/OpenVoice.git
+    cd OpenVoice 
+    ```
+**2. Create a Python Environment:**
+    ```
+    conda create -n openvoice python=3.9
+    conda activate openvoice
+    ```
+
+**3. Install OpenVoice:**
+    ```
+    pip install -e .
+    ```
+
+**3. Next Step:**
+    Depending on the version you are using follow the next steps: 
+- [OpenVoice V1](#openvoice-v1): Installation and usage instructions for OpenVoice V1.
+- [OpenVoice V2](#openvoice-v2): Installation and usage instructions for OpenVoice V2.
 
 ### OpenVoice V1
 
@@ -73,3 +94,6 @@ python -m unidic download
 ## Windows Install (VS Code)
 
 Please use [this guide](https://github.com/Alienpups/OpenVoice/blob/main/docs/USAGE_WINDOWS.md) if you want to install and use OpenVoice on Windows.
+
+
+
