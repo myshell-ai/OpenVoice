@@ -13,7 +13,7 @@
 The input speech audio of OpenVoice can be in **Any Language**. OpenVoice can clone the voice in that speech audio, and use the voice to speak in multiple languages. For quick use, we recommend you to try the already deployed services:
 
 - [British English](https://app.myshell.ai/widget/vYjqae)
-- [American English](https://app.myshell.ai/widget/eIRjAf)
+- [American English](https://app.myshell.ai/widget/nEFFJf)
 - [Indian English](https://app.myshell.ai/widget/V3iYze)
 - [Australian English](https://app.myshell.ai/widget/fM7JVf)
 - [Spanish](https://app.myshell.ai/widget/NNFFVz)
