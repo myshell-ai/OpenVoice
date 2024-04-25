@@ -37,3 +37,36 @@ When calling `get_vad_segments` from `se_extractor.py`, there should be a messag
 Downloading: "https://github.com/snakers4/silero-vad/zipball/master" to /home/user/.cache/torch/hub/master.zip
 ```
 The download would fail if your machine can not access github. Please download the zip from "https://github.com/snakers4/silero-vad/zipball/master" manually and unzip it to `/home/user/.cache/torch/hub/snakers4_silero-vad_master`. You can also see [this issue](https://github.com/myshell-ai/OpenVoice/issues/57) for solutions for other versions of silero.
+
+## Missing `cuDNN` libraries
+#### Missing `cuDNN` libraries can be downloaded from the url below (requires login but you can just create a new account):
+
+[https://developer.nvidia.com/rdp/cudnn-archive](https://developer.nvidia.com/rdp/cudnn-archive)
+
+At the time of writing the required version of `cuDNN` for OpenVoice is `8.x` for `CUDA 11.x`.
+
+#### Extracting the `cuDNN` libraries:
+```bash
+tar -xvf <path_to_downloaded_cuDNN_archive>
+```
+
+Your `cuDNN` libraries will be in the `bin` directory of the extracted archive.
+
+## My system can't find downloaded `cuDNN` libraries
+
+If you already know the path to the required `cuDNN` libraries, you can set the `LD_LIBRARY_PATH` environment variable to that path. You can do this by running the following commands:
+  
+Check if the `LD_LIBRARY_PATH` environment variable is set.
+```bash
+echo $LD_LIBRARY_PATH
+```
+
+- #### If it's empty:
+  ```bash
+  export LD_LIBRARY_PATH=<path_to_cuDNN_libraries>
+  ```
+
+- #### Otherwise:
+  ```bash
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<path_to_cuDNN_libraries>
+  ```
