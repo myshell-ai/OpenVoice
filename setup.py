@@ -1,4 +1,5 @@
-from setuptools import setup
+from setuptools import setup, find_packages
+
 
 setup(name='MyShell-OpenVoice',
       version='0.0.0',
@@ -21,9 +22,8 @@ setup(name='MyShell-OpenVoice',
       author='MyShell',
       author_email='ethan@myshell.ai',
       license='MIT License',
-      packages=[
-          'openvoice'
-      ],
+      packages=find_packages(),
+
       python_requires='>=3.9',
       install_requires=[
             'librosa==0.9.1',
