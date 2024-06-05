@@ -13,13 +13,18 @@ import base64
 import librosa
 from whisper_timestamped.transcribe import get_audio_tensor, get_vad_segments
 
+# Check if CUDA is available and use it if so, otherwise use CPU
+device = "cuda" if torch.cuda.is_available() else "cpu"
+print(f"Using device: {device}")
+
 model_size = "medium"
-# Run on GPU with FP16
+# Run on GPU with FP16 if CUDA is available, otherwise use CPU with FP32
 model = None
+
 def split_audio_whisper(audio_path, audio_name, target_dir='processed'):
     global model
     if model is None:
-        model = WhisperModel(model_size, device="cuda", compute_type="float16")
+        model = WhisperModel(model_size, device=device, compute_type="float16" if device == "cuda" else "float32")
     audio = AudioSegment.from_file(audio_path)
     max_len = len(audio)
 
@@ -150,4 +155,3 @@ def get_se(audio_path, vc_model, target_dir='processed', vad=True):
         raise NotImplementedError('No audio segments found!')
     
     return vc_model.extract_se(audio_segs, se_save_path=se_path), audio_name
-
