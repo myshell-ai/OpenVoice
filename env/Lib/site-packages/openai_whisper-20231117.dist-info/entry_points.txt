@@ -1,0 +1,2 @@
+[console_scripts]
+whisper = whisper.transcribe:cli

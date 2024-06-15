@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: pyreadline3
+Version: 3.4.1
+Summary: A python implementation of GNU readline.
+Home-page: https://pypi.python.org/pypi/pyreadline3/
+Author: Bassem Girgis
+Author-email: brgirgis@gmail.com
+Maintainer: Bassem Girgis
+Maintainer-email: brgirgis@gmail.com
+License: BSD
+Download-URL: https://pypi.python.org/pypi/pyreadline3/
+Keywords: readline,pyreadline,pyreadline3
+Platform: Windows XP/2000/NT
+Platform: Windows 95/98/ME
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE.md
+
+
+The `pyreadline3` package is based on the stale package `pyreadline` located
+at https://github.com/pyreadline/pyreadline.
+The original `pyreadline` package is a python implementation of GNU `readline`
+functionality.
+It is based on the `ctypes` based UNC `readline` package by Gary Bishop.
+It is not complete.
+It has been tested for use with Windows 10.
+
+Version 3.4+ or pyreadline3 runs on Python 3.5+.
+
+Features
+
+- keyboard text selection and copy/paste
+- Shift-arrowkeys for text selection
+- Control-c can be used for copy activate with allow_ctrl_c(True) in config file
+- Double tapping ctrl-c will raise a KeyboardInterrupt, use
+  ctrl_c_tap_time_interval(x)
+- where x is your preferred tap time window, default 0.3 s.
+- paste pastes first line of content on clipboard.
+- ipython_paste, pastes tab-separated data as list of lists or numpy array if
+  all data is numeric
+- paste_mulitline_code pastes multi line code, removing any empty lines.
+
+The latest development version is always available at the project git
+repository https://github.com/pyreadline3/pyreadline3
+
+

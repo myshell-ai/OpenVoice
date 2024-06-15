@@ -1,0 +1,10 @@
+{
+  "ActiveTargetSystem": "WSL: Ubuntu",
+  "ExpandedNodes": [
+    "",
+    "\\openvoice",
+    "\\openvoice\\text"
+  ],
+  "SelectedNode": "\\requirements.txt",
+  "PreviewInSolutionExplorer": false
+}

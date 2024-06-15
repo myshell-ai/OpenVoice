@@ -1,0 +1,177 @@
+Metadata-Version: 2.1
+Name: librosa
+Version: 0.9.1
+Summary: Python module for audio and music processing
+Home-page: https://librosa.org
+Author: Brian McFee, librosa development team
+Author-email: brian.mcfee@nyu.edu
+License: ISC
+Project-URL: Documentation, https://librosa.org/doc
+Project-URL: Download, https://github.com/librosa/librosa/releases
+Project-URL: Source, https://github.com/librosa/librosa
+Project-URL: Tracker, https://github.com/librosa/librosa/issues
+Project-URL: Discussion forum, https://groups.google.com/g/librosa
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Multimedia :: Sound/Audio :: Analysis
+Classifier: Framework :: Matplotlib
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown; charset=UTF-8
+License-File: LICENSE.md
+Requires-Dist: audioread (>=2.1.5)
+Requires-Dist: numpy (>=1.17.0)
+Requires-Dist: scipy (>=1.2.0)
+Requires-Dist: scikit-learn (>=0.19.1)
+Requires-Dist: joblib (>=0.14)
+Requires-Dist: decorator (>=4.0.10)
+Requires-Dist: resampy (>=0.2.2)
+Requires-Dist: numba (>=0.45.1)
+Requires-Dist: soundfile (>=0.10.2)
+Requires-Dist: pooch (>=1.0)
+Requires-Dist: packaging (>=20.0)
+Provides-Extra: display
+Requires-Dist: matplotlib (>=3.3.0) ; extra == 'display'
+Provides-Extra: docs
+Requires-Dist: numpydoc ; extra == 'docs'
+Requires-Dist: sphinx (!=1.3.1) ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme (==0.5.*) ; extra == 'docs'
+Requires-Dist: numba (<0.50) ; extra == 'docs'
+Requires-Dist: matplotlib (>=3.3.0) ; extra == 'docs'
+Requires-Dist: sphinx-multiversion (>=0.2.3) ; extra == 'docs'
+Requires-Dist: sphinx-gallery (>=0.7) ; extra == 'docs'
+Requires-Dist: mir-eval (>=0.5) ; extra == 'docs'
+Requires-Dist: ipython (>=7.0) ; extra == 'docs'
+Requires-Dist: sphinxcontrib-svg2pdfconverter ; extra == 'docs'
+Requires-Dist: presets ; extra == 'docs'
+Provides-Extra: tests
+Requires-Dist: matplotlib (>=3.3.0) ; extra == 'tests'
+Requires-Dist: pytest-mpl ; extra == 'tests'
+Requires-Dist: pytest-cov ; extra == 'tests'
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: contextlib2 ; extra == 'tests'
+Requires-Dist: samplerate ; extra == 'tests'
+Requires-Dist: soxr ; extra == 'tests'
+
+librosa
+=======
+A python package for music and audio analysis.  
+
+[![PyPI](https://img.shields.io/pypi/v/librosa.svg)](https://pypi.python.org/pypi/librosa)
+[![Anaconda-Server Badge](https://anaconda.org/conda-forge/librosa/badges/version.svg)](https://anaconda.org/conda-forge/librosa)
+[![License](https://img.shields.io/pypi/l/librosa.svg)](https://github.com/librosa/librosa/blob/main/LICENSE.md)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.591533.svg)](https://doi.org/10.5281/zenodo.591533)
+
+[![CI](https://github.com/librosa/librosa/actions/workflows/ci.yml/badge.svg)](https://github.com/librosa/librosa/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/librosa/librosa/branch/main/graph/badge.svg?token=ULWnUHaIJC)](https://codecov.io/gh/librosa/librosa)
+
+
+Documentation
+-------------
+See https://librosa.org/doc/ for a complete reference manual and introductory tutorials.
+
+The [advanced example gallery](https://librosa.org/doc/latest/advanced.html) should give you a quick sense of the kinds
+of things that librosa can do.
+
+Installation
+------------
+
+The latest stable release is available on PyPI, and you can install it by saying
+```
+pip install librosa
+```
+
+Anaconda users can install using ``conda-forge``:
+```
+conda install -c conda-forge librosa
+```
+
+To build librosa from source, say `python setup.py build`.
+Then, to install librosa, say `python setup.py install`.
+If all went well, you should be able to execute the demo scripts under `examples/`
+(OS X users should follow the installation guide given below).
+
+Alternatively, you can download or clone the repository and use `pip` to handle dependencies:
+
+```
+unzip librosa.zip
+pip install -e librosa
+```
+or
+```
+git clone https://github.com/librosa/librosa.git
+pip install -e librosa
+```
+
+By calling `pip list` you should see `librosa` now as an installed package:
+```
+librosa (0.x.x, /path/to/librosa)
+```
+
+### Hints for the Installation
+
+`librosa` uses `soundfile` and `audioread` to load audio files.
+Note that `soundfile` does not currently support MP3, which will cause librosa to
+fall back on the `audioread` library.
+
+#### soundfile
+
+If you're using `conda` to install librosa, then most audio coding dependencies (except MP3) will be handled automatically.
+
+If you're using `pip` on a Linux environment, you may need to install `libsndfile`
+manually.  Please refer to the [SoundFile installation documentation](https://pysoundfile.readthedocs.io/#installation) for details.
+
+#### audioread and MP3 support
+
+To fuel `audioread` with more audio-decoding power (e.g., for reading MP3 files),
+you may need to install either *ffmpeg* or *GStreamer*.
+
+*Note that on some platforms, `audioread` needs at least one of the programs to work properly.*
+
+If you are using Anaconda, install *ffmpeg* by calling
+```
+conda install -c conda-forge ffmpeg
+```
+
+If you are not using Anaconda, here are some common commands for different operating systems:
+
+* Linux (apt-get): `apt-get install ffmpeg` or `apt-get install gstreamer1.0-plugins-base gstreamer1.0-plugins-ugly`
+* Linux (yum): `yum install ffmpeg` or `yum install gstreamer1.0-plugins-base gstreamer1.0-plugins-ugly`
+* Mac: `brew install ffmpeg` or `brew install gstreamer`
+* Windows: download ffmpeg binaries from this [website](https://www.gyan.dev/ffmpeg/builds/) or gstreamer binaries from this [website](https://gstreamer.freedesktop.org/)
+
+For GStreamer, you also need to install the Python bindings with 
+```
+pip install pygobject
+```
+
+Discussion
+----------
+
+Please direct non-development questions and discussion topics to our web forum at
+https://groups.google.com/forum/#!forum/librosa
+
+
+Citing
+------
+
+If you want to cite librosa in a scholarly work, there are two ways to do it.
+
+- If you are using the library for your work, for the sake of reproducibility, please cite
+  the version you used as indexed at Zenodo:
+
+    [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.591533.svg)](https://doi.org/10.5281/zenodo.591533)
+
+- If you wish to cite librosa for its design, motivation etc., please cite the paper
+  published at SciPy 2015:
+
+    McFee, Brian, Colin Raffel, Dawen Liang, Daniel PW Ellis, Matt McVicar, Eric Battenberg, and Oriol Nieto. "librosa: Audio and music signal analysis in python." In Proceedings of the 14th python in science conference, pp. 18-25. 2015.
+
+

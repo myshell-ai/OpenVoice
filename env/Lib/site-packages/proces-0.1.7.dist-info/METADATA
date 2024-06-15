@@ -1,0 +1,119 @@
+Metadata-Version: 2.1
+Name: proces
+Version: 0.1.7
+Summary: text preprocess.
+Home-page: https://github.com/Ailln/proces
+Author: Ailln
+Author-email: kinggreenhall@gmail.com
+License: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Proces
+
+[![Pypi](https://img.shields.io/pypi/v/proces.svg)](https://pypi.org/project/proces/)
+[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/Ailln/proces/blob/master/LICENSE)
+[![stars](https://img.shields.io/github/stars/Ailln/proces.svg)](https://github.com/Ailln/proces/stargazers)
+
+🐨 文本预处理。
+
+## 1 安装
+
+> ⚠️ 注意：
+> 1. 本地安装仅支持 Python 的 3.6 以上版本；
+> 2. 尽可能使用 `proces` 的最新版本。
+
+### 使用 pip 安装
+
+```shell
+pip install proces -U
+```
+
+### 从代码库安装
+
+```shell
+git clone https://github.com/Ailln/proces.git
+
+cd proces && python setup.py install
+```
+
+## 2 使用
+
+```python
+from proces import preprocess
+
+# 默认会按照顺序执行，处理空白字符、大写转小写、繁体转简体、全角转半角
+result = preprocess("Today, 你 幹 什 麼 ！")
+# result: today,你干什么!
+
+# 配置 pipeline，比如只去除空白字符
+result = preprocess("Today, 你 幹 什 麼 ！", pipelines=["handle_blank_character"])
+# result: Today,你幹什麼！
+
+# 单独使用子方法
+from proces import filter_unusual_characters, filter_
+from proces import handle_blank_character
+from proces import uppercase_to_lowercase
+from proces import traditional_to_simplified
+from proces import full_angle_to_half_angle
+from proces import handle_substitute
+
+# 删除不常见字符
+result = filter_unusual_characters("【你是个恶魔😈啊�】")
+# result: 【你是个恶魔啊】
+# 也可以使用短方法 filter_
+result = filter_("【你是个恶魔😈啊�】")
+# result: 【你是个恶魔啊】
+
+# 处理空白字符
+result = handle_blank_character("空 白 字 符")
+# result: 空白字符
+result = handle_blank_character("空 白 字 符", ",")
+# result: 空,白,字,符
+
+# 大写转小写
+result = uppercase_to_lowercase("UP to low")
+# result: up to low
+
+# 繁体转简体
+result = traditional_to_simplified("我幹什麼不干你事")
+# result: 我干什么不干你事
+
+# 全角转半角
+result = full_angle_to_half_angle("你好！")
+# result: 你好!
+
+# 替换一些字符
+result = handle_substitute("你好！/:-", r"/:-", "表情")
+# result: 你好！表情
+```
+
+```python
+## 敏感信息过滤
+from proces import mask_phone, mask_address
+
+# 过滤手机号
+result = mask_phone("手机号 13397238231")
+# result: 手机号 133********
+
+# 过滤地址
+result = mask_address("我在浙江杭州余杭区")
+# result: 我在浙江杭州***
+```
+
+## 3 TODO
+
+- [x] add get all methods of preprocess
+- [ ] 装饰器
+
+## 4 许可
+
+[![](https://award.dovolopor.com?lt=License&rt=MIT&rbc=green)](./LICENSE)
