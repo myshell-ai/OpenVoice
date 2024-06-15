@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: mkl
+Version: 2021.4.0
+Summary: Intel® oneAPI Math Kernel Library
+Home-page: https://software.intel.com/en-us/oneapi/onemkl
+Author: Intel Corporation
+Author-email: scripting@intel.com
+License: Intel Simplified Software License
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Other Audience
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: Other/Proprietary License
+Description-Content-Type: text/markdown
+Requires-Dist: intel-openmp (==2021.*)
+Requires-Dist: tbb (==2021.*)
+
+Intel® oneAPI Math Kernel Library (Intel® oneMKL) is a computing math library of highly optimized, extensively threaded routines for applications that require maximum performance. This package provides C and Data Parallel C++ (DPC++) programming language interfaces. Intel MKL C language interfaces can be called from applications written in either C or C++, as well as in any other language that can reference a C interface. Use it to optimize code for current and future generations of Intel® CPUs and GPUs.
+
+

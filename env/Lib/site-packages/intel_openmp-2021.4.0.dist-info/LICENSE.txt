@@ -1,0 +1,551 @@
+Intel End User License Agreement for Developer Tools (Version October 2020)
+
+IMPORTANT NOTICE - PLEASE READ AND AGREE BEFORE DOWNLOADING, INSTALLING, COPYING
+OR USING
+
+This Agreement is between you, or the company or other legal entity that you
+represent and warrant you have the legal authority to bind, (each, "You" or
+"Your") and Intel Corporation and its subsidiaries (collectively, "Intel")
+regarding Your use of the Materials. By downloading, installing, copying or
+otherwise using the Materials, You agree to be bound by the terms of this
+Agreement. If You do not agree to the terms of this Agreement, or do not have
+legal authority or required age to agree to them, do not download, install, copy
+or otherwise use the Materials.
+
+1. LICENSE DEFINITIONS.
+
+A. "Cloud Provider" means a third party cloud service provider offering a
+   cloud-based platform, infrastructure, application or storage services, such
+   as Microsoft Azure or Amazon Web Services, which You may utilize solely
+   subject to the restrictions set forth in Section 3.3 B.
+
+B. "Computer" means a computer, workstation or server(s); as well as a container
+   or virtual machine located on Your or Your Cloud Provider's server.
+
+C. "Derivative Work" means a derivative work, as defined in 17 U.S.C. 101, of
+   the Source Code.
+
+D. "Executable Code" means computer programming code in binary form suitable for
+   machine execution by a processor without the intervening steps of
+   interpretation or compilation.
+
+E. "Instance" means a single running copy of the Materials on a Computer.
+
+F. "Licensed Patent Claims" mean the claims of Intel's patents that are
+   necessarily and directly infringed by the reproduction and distribution of
+   the Materials that is authorized in Section 3 below, when the Materials are
+   in their unmodified form as delivered by Intel to You and not modified or
+   combined with anything else. Licensed Patent Claims are only those claims
+   that Intel can license without paying, or getting the consent of, a third
+   party.
+
+G. "Materials" mean the software, documentation, the software product serial
+   number, and other collateral, including any updates, that are made available
+   to You by Intel under this Agreement. Materials include any Redistributables,
+   Executable Code, Source Code, Sample Source Code, and Pre-Release Materials,
+   but do not include Third Party Programs.
+
+H. "Microsoft Platforms" mean any current and future Microsoft operating system
+   products, Microsoft run-time technologies (such as the .NET Framework), and
+   Microsoft application platforms (such as Microsoft Office or Microsoft
+   Dynamics) that Microsoft offers.
+
+I. "Pre-Release Materials" mean the Materials, or portions of the Materials,
+   that are identified (in the product release notes, on Intel's download
+   website for the Materials or elsewhere) or labeled as pre-release, prototype,
+   alpha or beta code and, as such, are deemed to be pre-release code, which may
+   not be fully functional or tested and may contain bugs or errors, which Intel
+   may substantially modify in its development of a production version, and for
+   which Intel makes no assurances that it will ever develop or make generally
+   available a production version. Pre-Release Materials are subject to the
+   terms of Section 4.2.
+
+J. "Priority Support" means assistance through Intel's Online Service Center for
+   paid User Types for the Materials.
+
+K. "Reciprocal Open Source Software" means any software that is subject to a
+   license which requires that (a) it must be distributed in source code form;
+   (b) it must be licensed under the same open source license terms; and (c) its
+   derivative works must be licensed under the same open source license terms.
+   Examples of this type of license are the GNU General Public License or the
+   Mozilla Public License.
+
+L. "Redistributables" mean the files (if any) listed in the "redist.txt",
+   "redist-rt.txt" or similarly-named text files that may be included in the
+   Materials. Redistributables include Sample Source Code.
+
+M. "Sample Source Code" means those portions of the Materials that are Source
+   Code and are identified as sample code. Sample Source Code may not have been
+   tested nor validated by Intel and is provided purely as a programming
+   example.
+
+N. "Source Code" means the software portion of the Materials provided in human
+   readable format.
+
+O. "Term" means either a perpetual  or a time limited term for the Materials
+   that You obtain as specified on Intel's download website, in Intel's
+   applicable documentation or as controlled by the serial number for the
+   Materials.
+
+P. "Third Party Programs" mean the files (if any) listed in the
+   "third-party-programs.txt" or other similarly-named text file that may be
+   included in the Materials for the applicable software.
+
+Q. "User Type" has the meaning specified in Section 2.
+
+R. "Your Product" means one or more applications, products or projects developed
+   by or for You using the Materials.
+
+2. USER TYPES. This Agreement covers both free and paid User Types. Free users
+   do not receive access to Priority Support. All paid users receive access to
+   Priority Support upon the payment of fees specified in Section 5.  If you are
+   a paid user, then the type of license You receive will be specified in
+   writing by Intel directly or by an authorized Intel distributor. You
+   understand and agree that the following User Types described below are
+   subject to Your continued compliance with the license grants in Section 3:
+
+2.1 Free User. You are authorized to run as many Instances as needed for an
+    unlimited number of users for You, Your company or other legal entity that
+    you represent.
+
+2.2 Single Named-User. Subject to payment of appropriate fees, You are
+    authorized to run as many Instances as needed for a single user.
+
+2.3 Concurrent User. Subject to payment of appropriate fees, You are authorized
+    to run as many Instances as needed on a designated network(s) for use by no
+    more than the authorized number of concurrent users.
+
+2.4 Site User. Subject to payment of appropriate fees, You are authorized to run
+    as many Instances as needed for use by any number of concurrent users
+    located at the specified site or sites specified in the
+    "site_license_materials.txt" file you receive from Intel.
+
+3. LICENSE GRANTS.
+
+3.1 License to the Materials.
+
+    Subject to the terms and conditions of this Agreement, Intel grants You for
+    the appropriate Term a non-exclusive, worldwide, non-assignable (except as
+    expressly permitted hereunder), non-sublicensable, limited right and license
+    for Your applicable User Type:
+
+ A. under its copyrights, to:
+
+ (1) reproduce internally a reasonable number of copies of the Materials for
+     Your personal or business use;
+
+ (2) use the Materials internally solely for Your personal or business use to
+     develop Your Product, in accordance with the documentation or text files
+     included as part of the Materials;
+
+ (3) modify or create Derivative Works of the Redistributables, or any portions,
+     that are provided to You in Source Code;
+
+ (4) distribute (directly and through Your distributors, resellers, and other
+     channel partners, if applicable), the Redistributables, including any
+     modifications to or Derivative Works of the Redistributables made pursuant
+     to Section 3.1.A(3), or any portions, subject to the following conditions:
+
+  (a) Any distribution of the Redistributables must only be as part of Your
+      Product which must add significant primary functionality different than
+      that of the Redistributables themselves;
+
+  (b) You will redistribute the Redistributables originally provided to You by
+      Intel only in Executable Code subject to a license agreement that
+      prohibits disassembly and reverse engineering of the Redistributables;
+
+  (c) This distribution right includes a limited right to sublicense  only the
+      Intel copyrights in the Redistributables and only to the extent necessary
+      to perform, display, and distribute the Redistributables (including Your
+      modifications and Derivative Works) solely as incorporated in Your
+      Product; and
+
+  (d) You (i) will be solely responsible to Your customers for any update,
+      support obligation or other liability which may arise from Your
+      distribution of Your Product, (ii) will not make any statement that Your
+      Product is "certified" or that its performance is guaranteed by Intel or
+      its suppliers, (iii) will not use Intel's or its suppliers' names or
+      trademarks to market Your Product without written permission from Intel,
+      (iv) will comply with any additional restrictions which are included in
+      the text files with the Redistributables and in Section 4 below, (v) will
+      indemnify, hold harmless, and defend Intel and its suppliers from and
+      against any claims or lawsuits, including attorney's fees, that arise or
+      result from Your modifications, Derivative Works or Your distribution of
+      Your Product;
+
+ and
+
+ B. under Intel's Licensed Patent Claims, to:
+ (1) make copies of the Materials only as specified in Section 3.1.A(1);
+ (2) use the Materials only as specified in Section 3.1.A(2); and
+ (3) offer to distribute, and distribute, but not sell, the Redistributables
+     only as part of Your Product under Intel's copyright license granted in
+     Section 3.1(A), but only under the terms of that copyright license and not
+     as a sale;
+ And, provided further, that the license under the Licensed Patent Claims does
+ not and will not apply to, and Intel expressly does not grant You a patent
+ license in this Agreement to, any modifications to, or Derivative Works of, the
+ Materials or Redistributables, whether made by You, Your contractor(s), Your
+ customer(s) (which, for all purposes under this Agreement, will mean either a
+ customer, reseller, distributor or other channel partner) or any third party,
+ even if the modifications or Derivative Works are permitted under 3.1.A(3).
+
+3.2 Third Party Programs and Other Intel Programs Licenses. Third Party
+    Programs, even if included with the distribution of the Materials, may be
+    governed by separate license terms, including without limitation, third
+    party license terms, open source software notices and terms, and/or other
+    Intel software license terms. These separate license terms solely govern
+    Your use of the Third Party Programs.
+
+3.3 Third Party Use.
+
+A. If you are an entity, Your contractors may use the Materials as specified in
+   Section 3, provided: (i) their use of the Materials is solely on behalf of
+   and in support of Your business, (ii) they agree to the terms and conditions
+   of this Agreement, and (iii) You are solely responsible for their use of the
+   Materials.
+
+B. You may utilize a Cloud Provider to host the Materials for You, provided: (i)
+   the Cloud Provider may only host the Materials for Your exclusive use and may
+   not use the Materials for any other purpose whatsoever, including the
+   restriction set forth in Section 4.1(xii); (ii) the Cloud Provider's use of
+   the Materials must be solely on behalf of and in support of Your Product, and
+   (iii) You will indemnify, hold harmless, and defend Intel and its suppliers
+   from and against any claims or lawsuits, including attorney's fees, that
+   arise or result from Your Cloud Provider's use, misuse or disclosure of the
+   Materials.
+
+4. LICENSE CONDITIONS.
+
+4.1 Restrictions. Except as expressly provided in this Agreement, You may NOT:
+    (i) use, copy, distribute, or publicly display the Materials; (ii) share,
+    publish, rent or lease the Materials to any third party; (iii) assign this
+    Agreement or transfer the Materials; (iv) modify, adapt, or translate the
+    Materials in whole or in part; (v) reverse engineer, decompile, or
+    disassemble the Materials, or otherwise attempt to derive the source code
+    for the software; (vi) work around any technical limitations in the
+    Materials or attempt to modify or tamper with the normal function of any
+    license manager that may regulate usage of the Materials; (vii) distribute,
+    sublicense or transfer any Source Code, of the Materials or Derivative Works
+    to any third party; (viii) allow Redistributables to run on a platform other
+    than a Microsoft Platform if according to the accompanying user
+    documentation the Materials are meant to execute only on a Microsoft
+    Platform; (ix) remove, minimize, block or modify any notices of Intel or its
+    suppliers in the Materials; (x) include the Redistributables in malicious,
+    deceptive, or unlawful programs or products or use the Materials in any way
+    that is against the law; (xi) modify, create a Derivative Work, link, or
+    distribute the Materials so that any part of it becomes Reciprocal Open
+    Source Software; (xii) use the Materials directly or indirectly for SaaS
+    services or service bureau purposes (i.e., a service that allows use of or
+    access to the Materials by a third party as a service, such as the
+    salesforce.com service business model).
+
+4.2 Pre-Release Materials. If You receive Pre-Release Materials, You may
+    reproduce a reasonable number of copies, and use the Pre-Release Materials
+    for evaluation, and testing purposes only. You may not (i) modify or
+    incorporate the Pre-Release Materials into Your Product; (ii) continue to
+    use the Pre-Release Materials once a commercial version is released; or
+    (iii) disclose to any third party any benchmarks, performance results, or
+    other information relating to the Pre-Release Materials. Intel may waive
+    these restrictions in writing at its sole discretion; however, if You decide
+    to use the Pre-Release Materials in Your Product (even with Intel's waiver),
+    You acknowledge and agree that You are fully responsible for any and all
+    issues that result.
+
+4.3 Safety, Critical, and Lifesaving Applications. The Materials may provide
+    information relevant to safety-critical applications to allow compliance
+    with functional safety standards or requirements ("Safety-Critical
+    Applications"). You understand and acknowledge that safety is Your
+    responsibility. To the extent You use the Materials to create, or as part
+    of, products used in Safety-Critical Applications it is Your
+    responsibility to design, manage and assure system-level safeguards to
+    anticipate, monitor and control system failures, and You agree that You are
+    solely responsible for all applicable regulatory standards and
+    safety-related requirements concerning Your use of the Materials in Safety
+    Critical Applications.  Should You use the Materials for Safety-Critical
+    Applications or in any type of a system or application in which the failure
+    of the Materials could create a situation where personal injury or death may
+    occur (e.g.,  medical systems, life sustaining or lifesaving systems)
+    ("Lifesaving Applications"), You agree to indemnify, defend, and hold Intel
+    and its representatives harmless against all claims, costs, damages, and
+    expenses, including reasonable attorney fees arising in any way out of Your
+    use of the Materials in Safety-Critical Applications or Lifesaving
+    Applications and claims of product liability, personal injury or death
+    associated with those applications; even if such claims allege that Intel
+    was negligent or strictly liable regarding the design or manufacture of the
+    Materials or its failure to warn regarding the Materials.
+
+4.4 Media Format Codecs and Digital Rights Management. You acknowledge and agree
+    that Your use of the Materials or distribution of the Redistributables with
+    Your Product as permitted by this Agreement may require You to procure
+    license(s) from third parties that may hold intellectual property rights
+    applicable to any media decoding, encoding or transcoding technology (e.g.,
+    the use of an audio or video codec) and/or digital rights management
+    capabilities of the Materials, if any. Should any such additional licenses
+    be required, You are solely responsible for obtaining any such licenses and
+    agree to obtain any such licenses at Your own expense.
+
+4.5 Materials Transfer. You may only permanently transfer the Materials, and all
+    of Your rights and obligations under this Agreement, to another party
+    ("Recipient") solely in conjunction with a change of ownership, merger,
+    acquisition, sale or transfer of all or substantially all of Your business
+    or assets, either voluntarily, by operation of law or otherwise subject to
+    the following: You must notify Intel of the transfer by sending a letter to
+    Intel: (i) identifying the Recipient and Your legal entities, (ii)
+    identifying the Materials (i.e., the specific Intel software and version)
+    and the associated serial numbers to be transferred, (iii) certifying that
+    You retain no copies of the Materials or portions, (iv) certifying that the
+    Recipient has agreed in writing to be bound by all of the terms and
+    conditions of this Agreement, (v) for paid User Types listed in Section 2,
+    certifying that the Recipient has been notified that in order to receive
+    support from Intel for the Materials they must notify Intel in writing of
+    the transfer and provide Intel with the information specified in subsection
+    (ii) above along with the name and email address of the individual assigned
+    to use the Materials, and (vi) providing Your email address so that Intel
+    may confirm receipt of Your letter.  The above information can be emailed to
+    your Intel representative or by letter to:  Intel Corporation, 2111 NE 25th
+    Avenue, Hillsboro, OR 97124, Attn: CPDP Contracts Management, JF2-28. The
+    Materials will be permanently transferred to the Recipient once Intel
+    confirms receipt of Your request.
+
+5. FEES; TAXES.
+
+5.1 Fees. Upon Your receipt of Intel's or its reseller's invoice, You will pay
+    Intel or its reseller the license and support fees, if any, for the
+    Materials in US dollars according to Your User Type
+
+5.2 Taxes. All payments will be made free and clear without deduction for any
+    and all present and future taxes imposed by any taxing authority. In the
+    event that You are prohibited by law from making such payments unless You
+    deduct or withhold taxes therefrom and remit such taxes to the local taxing
+    jurisdiction, then You will duly withhold and remit such taxes to the
+    appropriate taxing authority and will pay to Intel or its reseller its
+    proportionate share of the remaining net amount after the taxes have been
+    withheld. You will promptly furnish Intel or its reseller with a copy of an
+    official tax receipt or other appropriate evidence of any taxes imposed on
+    payments made under this Agreement, including taxes on any additional
+    amounts paid. In cases other than taxes referred to above, including but not
+    limited to sales and use taxes, stamp taxes, value added taxes, property
+    taxes and other taxes or duties imposed by any taxing authority on or with
+    respect to this Agreement, the costs of such taxes or duties will be borne
+    by You. In the event that such taxes or duties are legally imposed initially
+    on Intel or its reseller, or Intel or its reseller is later assessed by any
+    taxing authority, then Intel or its reseller will be promptly reimbursed by
+    You for such taxes or duties.
+
+6. DATA COLLECTION AND PRIVACY.
+
+6.1 Data Collection. Certain Materials may generate and collect anonymous data
+    and/or provisioning data about the Materials and/or the development
+    environment and transmit the data to Intel as a one-time event during
+    installation. Optional data may also be collected by the Materials, however,
+    You will be provided notice of the request to collect optional data and no
+    optional data will be collected without Your consent. All data collection by
+    Intel is performed pursuant to relevant privacy laws, including notice and
+    consent requirements.
+
+6.2 Intel's Privacy Notice. Intel is committed to respecting Your privacy. To
+    learn more about Intel's privacy practices, please visit
+    http://www.intel.com/privacy.
+
+7. OWNERSHIP. Title to the Materials and all copies remain with Intel or its
+   suppliers. The Materials are protected by intellectual property rights,
+   including without limitation, United States copyright laws and international
+   treaty provisions. You will not remove any copyright or other proprietary
+   notices from the Materials. You agree to prevent any unauthorized copying of
+   the Materials. Except as expressly provided herein, no license or right is
+   granted to You directly or by implication, inducement, estoppel or otherwise;
+   specifically Intel does not grant any express or implied right to You under
+   Intel patents, copyrights, trademarks, or trade secrets.
+
+8. NO WARRANTY AND NO SUPPORT.
+
+8.1 No Warranty. Disclaimer. Intel disclaims all warranties of any kind and the
+    terms and remedies provided in this Agreement are instead of any other
+    warranty or condition, express, implied or statutory, including those
+    regarding merchantability, fitness for any particular purpose,
+    non-infringement or any warranty arising out of any course of dealing, usage
+    of trade, proposal, specification or sample. Intel does not assume (and does
+    not authorize any person to assume on its behalf) any other liability.
+
+8.2 No Support; Priority Support for Paid User Types. Intel may make changes to
+    the Materials, or to items referenced therein, at any time without notice,
+    but is not obligated to support, update or provide training for the
+    Materials under the terms of this Agreement. Intel offers Priority Support
+    for paid User Types.
+
+9. LIMITATION OF LIABILITY.
+
+9.1 Intel will not be liable for any of the following losses or damages
+    (whether such losses or damages were foreseen, foreseeable, known or
+    otherwise): (i) loss of revenue; (ii) loss of actual or anticipated profits;
+    (iii) loss of the use of money; (iv) loss of anticipated savings; (v) loss
+    of business; (vi) loss of opportunity; (vii) loss of goodwill; (viii) loss
+    of use of the Materials; (ix) loss of reputation; (x) loss of, damage to, or
+    corruption of data; or (xi) any indirect, incidental special or
+    consequential loss of damage however caused (including loss or damage of the
+    type specified in this Section 9).
+
+9.2 Intel's total cumulative liability to You, including for direct damages for
+    claims relating to this Agreement (whether for breach of contract,
+    negligence, or for any other reason), will not exceed the sum paid to Intel
+    by You in the twelve (12) month period preceding the date such claim arose
+    for the Materials that are the subject of and directly affected by such
+    claim.
+
+9.3 You acknowledge that the limitations of liability provided in this Section 9
+    are an essential part of this Agreement. You agree that the limitations of
+    liability provided in this Agreement with respect to Intel will be conveyed
+    to and made binding upon any customer of Yours that acquires the
+    Redistributables, alone or in combination with other items from You.
+
+10. USER SUBMISSIONS. This Agreement does not obligate You to provide Intel with
+    materials, information, comments, suggestions or other communications
+    regarding the Materials. However, You agree that any material, information,
+    comments, suggestions or other communications You transmit or post to an
+    Intel website (including but not limited to, submissions to the Priority
+    Support and/or other customer support websites or online portals) or provide
+    to Intel under this Agreement are not controlled by the International
+    Traffic in Arms Regulations (ITAR) or the Export Administration Regulation
+    (EAR), and if related to the features, functions, performance or use of the
+    Materials are deemed non-confidential and non-proprietary
+    ("Communications"). Intel will have no obligations with respect to the
+    Communications. You hereby grant to Intel a non-exclusive, perpetual,
+    irrevocable, royalty-free, copyright license to copy, modify, create
+    Derivative Works, publicly display, disclose, distribute, license and
+    sublicense through multiple tiers of distribution and licensees, incorporate
+    and otherwise use the Communications and all data, images, sounds, text, and
+    other things embodied therein, including Derivative Works thereto, for any
+    and all commercial or non-commercial purposes. You are prohibited from
+    posting or transmitting to or from an Intel website or providing to Intel
+    any unlawful, threatening, libelous, defamatory, obscene, pornographic, or
+    other material that would violate any law. If You wish to provide Intel with
+    information that You intend to be treated as confidential information, Intel
+    requires that such confidential information be provided pursuant to a
+    non-disclosure agreement ("NDA"); please contact Your Intel representative
+    to ensure the proper NDA is in place.
+
+    Nothing in this Agreement will be construed as preventing Intel from
+    reviewing Your Communications and errors or defects in Intel products
+    discovered while reviewing Your Communications. Furthermore, nothing in this
+    Agreement will be construed as preventing Intel from implementing
+    independently-developed enhancements to Intel's own error diagnosis
+    methodology to detect errors or defects in Intel products discovered while
+    reviewing Your Communications or to implement bug fixes or enhancements in
+    Intel products. The foregoing may include the right to include Your
+    Communications in regression test suites.
+
+11. NON-DISCLOSURE. Information provided by Intel to You may include information
+    marked as confidential. You must treat such information as confidential
+    under the terms of the applicable NDA between Intel and You. If You have not
+    entered into an NDA with Intel, You must not disclose, distribute or make
+    use of any information marked as confidential, except as expressly
+    authorized in writing by Intel. Intel retains all rights in and to its
+    confidential information specifications, designs, engineering details,
+    discoveries, inventions, patents, copyrights, trademarks, trade secrets and
+    other proprietary rights relating to the Materials.  Any breach by You of
+    the confidentiality obligations provided for in this Section 11 will cause
+    irreparable injury to Intel for which money damages may be inadequate to
+    compensate Intel for losses arising from such a breach. Intel may obtain
+    equitable relief, including injunctive relief, if You breach or threaten to
+    breach Your confidentiality obligations.
+
+12. TERM AND TERMINATION. This Agreement becomes effective on the date You
+    accept this Agreement and will continue until terminated as provided for in
+    this Agreement. If You are using the Materials under a paid User Type with a
+    limited Term, this Agreement terminates without notice on the last day of
+    the Term. If you are using the Materials under a free User Type, the Term is
+    perpetual. The Term for any Pre-Release Materials terminates upon release of
+    a commercial version. Intel may terminate this Agreement if You are in
+    breach of any of its terms and conditions and such breach is not cured
+    within thirty (30) days of written notice from Intel. Upon termination, You
+    will promptly destroy the Materials and all copies. In the event of
+    termination of this Agreement, the license grant to any Redistributables
+    distributed by You in accordance with the terms and conditions of this
+    Agreement, prior to the effective date of such termination, will survive any
+    such termination of this Agreement. Sections 1, 3.1.A(4)(d)(v), 3.2, 3.3
+    B(iii), 4.3, 5.2, 6, 7, 8, 9, 10, 11, 12 (with respect to these survival
+    provisions in the last sentence), 13, and 14 will survive expiration or
+    termination of this Agreement.
+
+13. U.S. GOVERNMENT RESTRICTED RIGHTS. The technical data and computer software
+    covered by this license is a "Commercial Item," as such term is defined by
+    the FAR 2.101 (48 C.F.R. 2.101) and is "commercial computer software" and
+    "commercial computer software documentation" as specified under FAR 12.212
+    (48 C.F.R. 12.212) or DFARS 227.7202 (48 C.F.R. 227.7202), as applicable.
+    This commercial computer software and related documentation is provided to
+    end users for use by and on behalf of the U.S. Government, with only those
+    rights as are granted to all other end users pursuant to the terms and
+    conditions of this Agreement.
+
+14. GENERAL PROVISIONS.
+
+14.1 ENTIRE AGREEMENT. This Agreement contains the complete and exclusive
+     agreement and understanding between the parties concerning the subject
+     matter of this Agreement, and supersedes all prior and contemporaneous
+     proposals, agreements, understanding, negotiations, representations,
+     warranties, conditions, and communications, oral or written, between the
+     parties relating to the same subject matter. This Agreement, including
+     without limitation its termination, has no effect on any signed NDA between
+     the parties, which remain in full force and effect as separate agreements
+     to their terms. Each party acknowledges and agrees that in entering into
+     this Agreement it has not relied on, and will not be entitled to rely on,
+     any oral or written representations, warranties, conditions, understanding,
+     or communications between the parties that are not expressly set forth in
+     this Agreement. The express provisions of this Agreement control over any
+     course of performance, course of dealing, or usage of the trade
+     inconsistent with any of the provisions of this Agreement. The provisions
+     of this Agreement will prevail notwithstanding any different, conflicting,
+     or additional provisions that may appear on any purchase order,
+     acknowledgement, invoice, or other writing issued by either party in
+     connection with this Agreement. No modification or amendment to this
+     Agreement will be effective unless in writing and signed by authorized
+     representatives of each party, and must specifically identify this
+     Agreement by its title and version (e.g., "Intel oneAPI End User License
+     Agreement (Version October 2020)"); except that Intel may make changes to
+     the Agreement as it distributes new versions of the Materials. When changes
+     are made, Intel will make a new version of the Agreement available on its
+     website. If You received a copy of this Agreement translated into another
+     language, the English language version of this Agreement will prevail in
+     the event of any conflict between versions.
+
+14.2 EXPORT. You acknowledge that the Materials and all related technical
+     information are subject to export controls and you agree to comply with all
+     laws and regulations of the United States and other applicable governments
+     governing export, re-export, import, transfer, distribution, and use of the
+     Materials. In particular, but without limitation, the Materials may not be
+     exported or re-exported (a) into any U.S. embargoed countries or (b) to any
+     person or entity listed on a denial order published by the U.S. government
+     or any other applicable governments. By using the Materials, You represent
+     and warrant that You are not located in any such country or on any such
+     list. You also agree that You will not use the Materials for, or sell or
+     transfer them to a third party who is known or suspected to be involved in,
+     any purposes prohibited by the U.S. government or other applicable
+     governments, including, without limitation, the development, design,
+     manufacture, or production of nuclear, missile, chemical or biological
+     weapons.
+
+14.3 GOVERNING LAW, JURISDICTION, AND VENUE. All disputes arising out of or
+     related to this Agreement, whether based on contract, tort, or any other
+     legal or equitable theory, will in all respects be governed by, and
+     construed and interpreted under, the laws of the United States of America
+     and the State of Delaware, without reference to conflict of laws
+     principles. The parties agree that the United Nations Convention on
+     Contracts for the International Sale of Goods (1980) is specifically
+     excluded from and will not apply to this Agreement. All disputes arising
+     out of or related to this Agreement, whether based on contract, tort, or
+     any other legal or equitable theory, will be subject to the exclusive
+     jurisdiction of the courts of the State of Delaware or of the Federal
+     courts sitting in that State. Each party submits to the personal
+     jurisdiction of those courts and waives all objections to that
+     jurisdiction and venue for those disputes.
+
+14.4 SEVERABILITY. The parties intend that if a court holds that any provision
+     or part of this Agreement is invalid or unenforceable under applicable law,
+     the court will modify the provision to the minimum extent necessary to make
+     it valid and enforceable, or if it cannot be made valid and enforceable,
+     the parties intend that the court will sever and delete the provision or
+     part from this Agreement. Any change to or deletion of a provision or part
+     of this Agreement under this Section will not affect the validity or
+     enforceability of the remainder of this Agreement, which will continue in
+     full force and effect.

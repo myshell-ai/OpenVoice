@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\spsee\\OpenVoice\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\spsee\\OpenVoice\\requirements.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:requirements.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\spsee\\OpenVoice\\openvoice\\openvoice_app.py||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:openvoice\\openvoice_app.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
@@ -31,6 +35,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "requirements.txt",
+              "DocumentMoniker": "C:\\Users\\spsee\\OpenVoice\\requirements.txt",
+              "RelativeDocumentMoniker": "requirements.txt",
+              "ToolTip": "C:\\Users\\spsee\\OpenVoice\\requirements.txt",
+              "RelativeToolTip": "requirements.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-05-29T06:00:53.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "openvoice_app.py",
               "DocumentMoniker": "C:\\Users\\spsee\\OpenVoice\\openvoice\\openvoice_app.py",
               "RelativeDocumentMoniker": "openvoice\\openvoice_app.py",
@@ -43,7 +60,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "api.py",
               "DocumentMoniker": "C:\\Users\\spsee\\OpenVoice\\openvoice\\api.py",
               "RelativeDocumentMoniker": "openvoice\\api.py",
@@ -56,7 +73,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "demo_part3.ipynb",
               "DocumentMoniker": "C:\\Users\\spsee\\OpenVoice\\demo_part3.ipynb",
               "RelativeDocumentMoniker": "demo_part3.ipynb",
@@ -69,7 +86,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "setup.py",
               "DocumentMoniker": "C:\\Users\\spsee\\OpenVoice\\setup.py",
               "RelativeDocumentMoniker": "setup.py",

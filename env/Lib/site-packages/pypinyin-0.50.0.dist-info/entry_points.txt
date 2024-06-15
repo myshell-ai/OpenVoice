@@ -1,0 +1,3 @@
+[console_scripts]
+pypinyin = pypinyin.__main__:main
+

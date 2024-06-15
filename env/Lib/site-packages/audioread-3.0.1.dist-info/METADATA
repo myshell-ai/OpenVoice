@@ -1,0 +1,239 @@
+Metadata-Version: 2.1
+Name: audioread
+Version: 3.0.1
+Summary: Multi-library, cross-platform audio decoding.
+Author-email: Adrian Sampson <adrian@radbox.org>
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+Classifier: Topic :: Multimedia :: Sound/Audio :: Conversion
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: tox ; extra == "test"
+Project-URL: Home, https://github.com/beetbox/audioread
+Provides-Extra: test
+
+audioread
+=========
+
+Decode audio files using whichever backend is available. The library
+currently supports:
+
+- `Gstreamer`_ via `PyGObject`_.
+- `Core Audio`_ on Mac OS X via `ctypes`_. (PyObjC not required.)
+- `MAD`_ via the `pymad`_ bindings.
+- `FFmpeg`_ or `Libav`_ via its command-line interface.
+- The standard library `wave`_, `aifc`_, and `sunau`_ modules (for
+  uncompressed audio formats).
+
+.. _Gstreamer: http://gstreamer.freedesktop.org/
+.. _gst-python: http://gstreamer.freedesktop.org/modules/gst-python.html
+.. _Core Audio: http://developer.apple.com/technologies/mac/audio-and-video.html
+.. _ctypes: http://docs.python.org/library/ctypes.html
+.. _MAD: http://www.underbit.com/products/mad/
+.. _pymad: http://spacepants.org/src/pymad/
+.. _FFmpeg: http://ffmpeg.org/
+.. _Libav: https://www.libav.org/
+.. _wave: http://docs.python.org/library/wave.html
+.. _aifc: http://docs.python.org/library/aifc.html
+.. _sunau: http://docs.python.org/library/sunau.html
+.. _PyGObject: https://pygobject.readthedocs.io/
+
+Use the library like so::
+
+    with audioread.audio_open(filename) as f:
+        print(f.channels, f.samplerate, f.duration)
+        for buf in f:
+            do_something(buf)
+
+Buffers in the file can be accessed by iterating over the object returned from
+``audio_open``. Each buffer is a bytes-like object (``buffer``, ``bytes``, or
+``bytearray``) containing raw **16-bit little-endian signed integer PCM
+data**. (Currently, these PCM format parameters are not configurable, but this
+could be added to most of the backends.)
+
+Additional values are available as fields on the audio file object:
+
+- ``channels`` is the number of audio channels (an integer).
+- ``samplerate`` is given in Hz (an integer).
+- ``duration`` is the length of the audio in seconds (a float).
+
+The ``audio_open`` function transparently selects a backend that can read the
+file. (Each backend is implemented in a module inside the ``audioread``
+package.) If no backends succeed in opening the file, a ``DecodeError``
+exception is raised. This exception is only used when the file type is
+unsupported by the backends; if the file doesn't exist, a standard ``IOError``
+will be raised.
+
+A second optional parameter to ``audio_open`` specifies which backends to try
+(instead of trying them all, which is the default). You can use the
+``available_backends`` function to get a list backends that are usable on the
+current system.
+
+Audioread supports Python 3 (3.8+).
+
+Example
+-------
+
+The included ``decode.py`` script demonstrates using this package to
+convert compressed audio files to WAV files.
+
+Troubleshooting
+---------------
+
+A ``NoBackendError`` exception means that the library could not find one of
+the libraries or tools it needs to decode audio. This could mean, for example,
+that you have a broken installation of `FFmpeg`_. To check, try typing
+``ffmpeg -version`` in your shell. If that gives you an error, try installing
+FFmpeg with your OS's package manager (e.g., apt or yum) or `using Conda
+<https://anaconda.org/conda-forge/ffmpeg>`_.
+
+Version History
+---------------
+
+3.0.1
+  Fix a possible deadlock when FFmpeg's version output produces too much data.
+
+3.0.0
+  Drop support for Python 2 and older versions of Python 3. The library now
+  requires Python 3.6+.
+  Increase default block size in FFmpegAudioFile to get slightly faster file reading.
+  Cache backends for faster lookup (thanks to @bmcfee).
+  Audio file classes now inherit from a common base ``AudioFile`` class.
+
+2.1.9
+  Work correctly with GStreamer 1.18 and later (thanks to @ssssam).
+
+2.1.8
+  Fix an unhandled ``OSError`` when FFmpeg is not installed.
+
+2.1.7
+  Properly close some filehandles in the FFmpeg backend (thanks to
+  @RyanMarcus and @ssssam).
+  The maddec backend now always produces bytes objects, like the other
+  backends (thanks to @ssssam).
+  Resolve an audio data memory leak in the GStreamer backend (thanks again to
+  @ssssam).
+  You can now optionally specify which specific backends ``audio_open`` should
+  try (thanks once again to @ssssam).
+  On Windows, avoid opening a console window to run FFmpeg (thanks to @flokX).
+
+2.1.6
+  Fix a "no such process" crash in the FFmpeg backend on Windows Subsystem for
+  Linux (thanks to @llamasoft).
+  Avoid suppressing SIGINT in the GStreamer backend on older versions of
+  PyGObject (thanks to @lazka).
+
+2.1.5
+  Properly clean up the file handle when a backend fails to decode a file.
+  Fix parsing of "N.M" channel counts in the FFmpeg backend (thanks to @piem).
+  Avoid a crash in the raw backend when a file uses an unsupported number of
+  bits per sample (namely, 24-bit samples in Python < 3.4).
+  Add a ``__version__`` value to the package.
+
+2.1.4
+  Fix a bug in the FFmpeg backend where, after closing a file, the program's
+  standard input stream would be "broken" and wouldn't receive any input.
+
+2.1.3
+  Avoid some warnings in the GStreamer backend when using modern versions of
+  GLib. We now require at least GLib 2.32.
+
+2.1.2
+  Fix a file descriptor leak when opening and closing many files using
+  GStreamer.
+
+2.1.1
+  Just fix ReST formatting in the README.
+
+2.1.0
+  The FFmpeg backend can now also use Libav's ``avconv`` command.
+  Fix a warning by requiring GStreamer >= 1.0.
+  Fix some Python 3 crashes with the new GStreamer backend (thanks to
+  @xix-xeaon).
+
+2.0.0
+  The GStreamer backend now uses GStreamer 1.x via the new
+  gobject-introspection API (and is compatible with Python 3).
+
+1.2.2
+  When running FFmpeg on Windows, disable its crash dialog. Thanks to
+  jcsaaddupuy.
+
+1.2.1
+  Fix an unhandled exception when opening non-raw audio files (thanks to
+  aostanin).
+  Fix Python 3 compatibility for the raw-file backend.
+
+1.2.0
+  Add support for FFmpeg on Windows (thanks to Jean-Christophe Saad-Dupuy).
+
+1.1.0
+  Add support for Sun/NeXT `Au files`_ via the standard-library ``sunau``
+  module (thanks to Dan Ellis).
+
+1.0.3
+  Use the rawread (standard-library) backend for .wav files.
+
+1.0.2
+  Send SIGKILL, not SIGTERM, to ffmpeg processes to avoid occasional hangs.
+
+1.0.1
+  When GStreamer fails to report a duration, raise an exception instead of
+  silently setting the duration field to None.
+
+1.0.0
+  Catch GStreamer's exception when necessary components, such as
+  ``uridecodebin``, are missing.
+  The GStreamer backend now accepts relative paths.
+  Fix a hang in GStreamer when the stream finishes before it begins (when
+  reading broken files).
+  Initial support for Python 3.
+
+0.8
+  All decoding errors are now subclasses of ``DecodeError``.
+
+0.7
+  Fix opening WAV and AIFF files via Unicode filenames.
+
+0.6
+  Make FFmpeg timeout more robust.
+  Dump FFmpeg output on timeout.
+  Fix a nondeterministic hang in the Gstreamer backend.
+  Fix a file descriptor leak in the MAD backend.
+
+0.5
+  Fix crash when FFmpeg fails to report a duration.
+  Fix a hang when FFmpeg fills up its stderr output buffer.
+  Add a timeout to ``ffmpeg`` tool execution (currently 10 seconds for each
+  4096-byte read); a ``ReadTimeoutError`` exception is raised if the tool times
+  out.
+
+0.4
+  Fix channel count detection for FFmpeg backend.
+
+0.3
+  Fix a problem with the Gstreamer backend where audio files could be left open
+  even after the ``GstAudioFile`` was "closed".
+
+0.2
+  Fix a hang in the GStreamer backend that occurs occasionally on some
+  platforms.
+
+0.1
+  Initial release.
+
+.. _Au files: http://en.wikipedia.org/wiki/Au_file_format
+
+Et Cetera
+---------
+
+``audioread`` is by Adrian Sampson. It is made available under `the MIT
+license`_. An alternative to this module is `decoder.py`_.
+
+.. _the MIT license: http://www.opensource.org/licenses/mit-license.php
+.. _decoder.py: http://www.brailleweb.com/cgi-bin/python.py
+

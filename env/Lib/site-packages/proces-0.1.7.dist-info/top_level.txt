@@ -1,0 +1,4 @@
+build
+dist
+proces
+scripts

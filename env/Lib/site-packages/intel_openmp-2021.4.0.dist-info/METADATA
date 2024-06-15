@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: intel-openmp
+Version: 2021.4.0
+Summary: Intel OpenMP* Runtime Library
+Home-page: https://software.intel.com/content/www/us/en/develop/tools/compilers/c-compilers.html
+Author: Intel Corporation
+Author-email: scripting@intel.com
+License: Intel End User License Agreement for Developer Tools
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Other Audience
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: Other/Proprietary License
+Description-Content-Type: text/markdown
+
+Intel OpenMP* Runtime Library x86_64 dynamic libraries for Windows*. Intel OpenMP* Runtime Library provides OpenMP API specification support in Intel® C Compiler, Intel® C++ Compiler and Intel® Fortran Compiler. It helps to improve performance by creating multithreaded software using shared memory and running on multi-core processor systems.
+
+

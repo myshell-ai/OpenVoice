@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: resampy
+Version: 0.4.3
+Summary: Efficient signal resampling
+Home-page: https://github.com/bmcfee/resampy
+Download-URL: https://github.com/bmcfee/resampy/releases
+Author: Brian McFee
+Author-email: brian.mcfee@nyu.edu
+License: ISC
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Multimedia :: Sound/Audio :: Analysis
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown; charset=UTF-8
+License-File: LICENSE.md
+Requires-Dist: numpy >=1.17
+Requires-Dist: numba >=0.53
+Requires-Dist: importlib-resources ; python_version < "3.9"
+Provides-Extra: design
+Requires-Dist: optuna >=2.10.0 ; extra == 'design'
+Provides-Extra: docs
+Requires-Dist: numpydoc ; extra == 'docs'
+Requires-Dist: sphinx !=1.3.1 ; extra == 'docs'
+Provides-Extra: tests
+Requires-Dist: pytest <8 ; extra == 'tests'
+Requires-Dist: pytest-cov ; extra == 'tests'
+Requires-Dist: scipy >=1.1 ; extra == 'tests'
+
+# resampy
+[![GitHub license](https://img.shields.io/badge/license-ISC-blue.svg)](https://raw.githubusercontent.com/bmcfee/resampy/master/LICENSE)
+[![PyPI](https://img.shields.io/pypi/v/resampy.svg)](https://pypi.python.org/pypi/resampy)
+[![Anaconda-Server Badge](https://anaconda.org/conda-forge/resampy/badges/version.svg)](https://anaconda.org/conda-forge/resampy)
+[![CI](https://github.com/bmcfee/resampy/actions/workflows/ci.yml/badge.svg)](https://github.com/bmcfee/resampy/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/bmcfee/resampy/branch/main/graph/badge.svg?token=o6a0xO89rz)](https://codecov.io/gh/bmcfee/resampy)
+[![Documentation Status](https://readthedocs.org/projects/resampy/badge/?version=stable)](https://resampy.readthedocs.io/en/stable/?badge=stable)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.596633.svg)](https://doi.org/10.5281/zenodo.596633)
+
+Efficient sample rate conversion in Python.
+
+This package implements the band-limited sinc interpolation method for sampling rate conversion as described by:
+> Smith, Julius O. Digital Audio Resampling Home Page
+> Center for Computer Research in Music and Acoustics (CCRMA), 
+> Stanford University, 2015-02-23.
+> Web published at [http://ccrma.stanford.edu/~jos/resample/](http://ccrma.stanford.edu/~jos/resample/).
+
+
+# Installation
+
+`resampy` can be installed `pip` by the following command:
+```
+python -m pip install resampy
+```
+
+It can also be installed by `conda` as follows:
+```
+conda install -c conda-forge resampy
+```
