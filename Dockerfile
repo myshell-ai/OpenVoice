@@ -26,15 +26,18 @@ RUN apt-get update && \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-COPY cudnn-linux-x86_64-8.9.7.29_cuda12-archive.tar.xz /tmp/
+# this will fail to copy if multiple are present in the same dir
+COPY ${CUDNN:-cudnn-linux-x86_64-*_cuda12-archive.tar.xz} /tmp/cudnn.tar.xz
 
-# Extract and install cuDNN 8.9.7
-RUN tar -xvf /tmp/cudnn-linux-x86_64-8.9.7.29_cuda12-archive.tar.xz -C /tmp && \
-    cp -P /tmp/cudnn-linux-x86_64-8.9.7.29_cuda12-archive/include/cudnn*.h /usr/local/cuda-12.1/include/ && \
-    cp -P /tmp/cudnn-linux-x86_64-8.9.7.29_cuda12-archive/lib/libcudnn* /usr/local/cuda-12.1/lib64/ && \
+# Extract and install cuDNN
+RUN mkdir /tmp/cudnn
+RUN tar -xvf /tmp/cudnn.tar.xz -C /tmp/cudnn && \
+    cp -P /tmp/cudnn/*/include/cudnn*.h /usr/local/cuda-12.1/include/ && \
+    cp -P /tmp/cudnn/*/lib/libcudnn* /usr/local/cuda-12.1/lib64/ && \
     chmod a+r /usr/local/cuda-12.1/include/cudnn*.h /usr/local/cuda-12.1/lib64/libcudnn*
+RUN rm -rf /tmp/cudnn
 
-# Set environment variables for CUDA and cuDNN
+    # Set environment variables for CUDA and cuDNN
 ENV PATH=/usr/local/cuda-12.1/bin:${PATH}
 ENV LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:${LD_LIBRARY_PATH}
 
