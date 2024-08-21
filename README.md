@@ -41,7 +41,7 @@ OpenVoice has been powering the instant voice cloning capability of [myshell.ai]
 
 ## Main Contributors
 
-- [Zengyi Qin](https://www.qinzy.tech) at MIT and MyShell
+- [Zengyi Qin](https://www.qinzy.tech) at MIT
 - [Wenliang Zhao](https://wl-zhao.github.io) at Tsinghua University
 - [Xumin Yu](https://yuxumin.github.io) at Tsinghua University
 - [Ethan Sun](https://twitter.com/ethan_myshell) at MyShell
