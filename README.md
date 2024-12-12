@@ -53,10 +53,6 @@ Please see [usage](docs/USAGE.md) for detailed instructions.
 
 Please see [QA](docs/QA.md) for common questions and answers. We will regularly update the question and answer list.
 
-## Join Our Community
-
-Join our [Discord community](https://discord.gg/myshell) and select the `Developer` role upon joining to gain exclusive access to our developer-only channel! Don't miss out on valuable discussions and collaboration opportunities.
-
 ## Citation
 ```
 @article{qin2023openvoice,
