@@ -48,7 +48,7 @@ No matter if you are using V1 or V2, the above installation is the same.
 
 ### OpenVoice V1
 
-Download the checkpoint from [here](https://myshell-public-repo-hosting.s3.amazonaws.com/openvoice/checkpoints_1226.zip) and extract it to the `checkpoints` folder.
+Download the checkpoint from [here](https://myshell-public-repo-host.s3.amazonaws.com/openvoice/checkpoints_1226.zip) and extract it to the `checkpoints` folder.
 
 **1. Flexible Voice Style Control.**
 Please see [`demo_part1.ipynb`](../demo_part1.ipynb) for an example usage of how OpenVoice enables flexible style control over the cloned voice.
@@ -60,7 +60,7 @@ Please see [`demo_part2.ipynb`](../demo_part2.ipynb) for an example for language
 
 ### OpenVoice V2
 
-Download the checkpoint from [here](https://myshell-public-repo-hosting.s3.amazonaws.com/openvoice/checkpoints_v2_0417.zip) and extract it to the `checkpoints_v2` folder.
+Download the checkpoint from [here](https://myshell-public-repo-host.s3.amazonaws.com/openvoice/checkpoints_v2_0417.zip) and extract it to the `checkpoints_v2` folder.
 
 Install [MeloTTS](https://github.com/myshell-ai/MeloTTS):
 ```
