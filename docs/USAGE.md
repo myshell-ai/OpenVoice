@@ -41,7 +41,7 @@ conda create -n openvoice python=3.9
 conda activate openvoice
 git clone git@github.com:myshell-ai/OpenVoice.git
 cd OpenVoice
-pip install -e .
+python -m pip install -e .
 ```
 
 No matter if you are using V1 or V2, the above installation is the same.
@@ -64,7 +64,7 @@ Download the checkpoint from [here](https://myshell-public-repo-host.s3.amazonaw
 
 Install [MeloTTS](https://github.com/myshell-ai/MeloTTS):
 ```
-pip install git+https://github.com/myshell-ai/MeloTTS.git
+python -m pip install git+https://github.com/myshell-ai/MeloTTS.git
 python -m unidic download
 ```
 
