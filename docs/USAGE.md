@@ -39,7 +39,7 @@ This section is only for developers and researchers who are familiar with Linux,
 ```
 conda create -n openvoice python=3.9
 conda activate openvoice
-git clone git@github.com:myshell-ai/OpenVoice.git
+git clone https://github.com/myshell-ai/OpenVoice.git
 cd OpenVoice
 pip install -e .
 ```
