@@ -101,7 +101,13 @@ def split_audio_vad(audio_path, audio_name, target_dir, split_seconds=10.0):
     start_time = 0.
     count = 0
     num_splits = int(np.round(audio_dur / split_seconds))
-    assert num_splits > 0, 'input audio is too short'
+    
+    # For audio shorter than split_seconds, treat it as a single segment
+    if audio_dur < split_seconds:
+        num_splits = 1
+    else:
+        assert num_splits > 0, 'input audio is too short'
+    
     interval = audio_dur / num_splits
 
     for i in range(num_splits):
