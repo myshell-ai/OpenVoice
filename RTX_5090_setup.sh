@@ -39,4 +39,12 @@ echo "V2: https://myshell-public-repo-host.s3.amazonaws.com/openvoice/checkpoint
 echo ""
 echo "Extract them to the 'checkpoints' and 'checkpoints_v2' folders respectively."
 echo ""
-echo "You can now run the demo with: python demo_part3.py" 
+echo "You can now run the demo with: python demo_part3.py"
+
+echo " you might need to run the following commands to setup the environment:
+conda create -n openvoice python=3.9
+conda activate openvoice
+git clone git@github.com:myshell-ai/OpenVoice.git
+cd OpenVoice
+pip install -e .
+"
