@@ -13,14 +13,13 @@ import base64
 import librosa
 from whisper_timestamped.transcribe import get_audio_tensor, get_vad_segments
 
-model_size =  os.getenv("MODEL_SIZE", "").strip() or "small"
-compute_type = os.getenv("COMPUTE_TYPE", "").strip() or "float16"
+model_size = "medium"
+# Run on GPU with FP16
 model = None
-
 def split_audio_whisper(audio_path, audio_name, target_dir='processed'):
     global model
     if model is None:
-        model = WhisperModel(model_size, device="cuda", compute_type=compute_type)
+        model = WhisperModel(model_size, device="cuda", compute_type="float16")
     audio = AudioSegment.from_file(audio_path)
     max_len = len(audio)
 
