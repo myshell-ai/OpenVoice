@@ -4,8 +4,8 @@
 
 - [Quick Use](#quick-use): directly use OpenVoice without installation.
 - [Linux Install](#linux-install): for researchers and developers only.
-    - [V1](#openvoice-v1)
-    - [V2](#openvoice-v2)
+  - [V1](#openvoice-v1)
+  - [V2](#openvoice-v2)
 - [Install on Other Platforms](#install-on-other-platforms): unofficial installation guide contributed by the community
 
 ## Quick Use
@@ -63,13 +63,13 @@ Please see [`demo_part2.ipynb`](../demo_part2.ipynb) for an example for language
 Download the checkpoint from [here](https://myshell-public-repo-host.s3.amazonaws.com/openvoice/checkpoints_v2_0417.zip) and extract it to the `checkpoints_v2` folder.
 
 Install [MeloTTS](https://github.com/myshell-ai/MeloTTS):
+
 ```
 pip install git+https://github.com/myshell-ai/MeloTTS.git
 python -m unidic download
 ```
 
 **Demo Usage.** Please see [`demo_part3.ipynb`](../demo_part3.ipynb) for example usage of OpenVoice V2. Now it natively supports English, Spanish, French, Chinese, Japanese and Korean.
-
 
 ## Install on Other Platforms
 
@@ -79,5 +79,6 @@ This section provides the unofficial installation guides by open-source contribu
   - [Guide](https://github.com/Alienpups/OpenVoice/blob/main/docs/USAGE_WINDOWS.md) by [@Alienpups](https://github.com/Alienpups)
   - You are welcome to contribute if you have a better installation guide. We will list you here.
 - Docker
+  - [Guide](https://github.com/namanthapliyal/OpenVoice/blob/main/docs/docker_usage.md) by [@namanthapliyal](https://github.com/namanthapliyal/)
   - [Guide](https://github.com/StevenJSCF/OpenVoice/blob/update-docs/docs/DF_USAGE.md) by [@StevenJSCF](https://github.com/StevenJSCF)
   - You are welcome to contribute if you have a better installation guide. We will list you here.
