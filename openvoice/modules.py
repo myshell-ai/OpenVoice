@@ -11,6 +11,8 @@ from openvoice.commons import init_weights, get_padding
 from openvoice.transforms import piecewise_rational_quadratic_transform
 from openvoice.attentions import Encoder
 
+from openvoice.mps_support import convt1d_chunked, conv1d_chunked
+
 LRELU_SLOPE = 0.1
 
 
@@ -298,11 +300,17 @@ class ResBlock1(torch.nn.Module):
             xt = F.leaky_relu(x, LRELU_SLOPE)
             if x_mask is not None:
                 xt = xt * x_mask
-            xt = c1(xt)
+            if str(x.device) != "mps:0":
+                xt = c1(xt)
+            else:
+                xt = conv1d_chunked(c1, xt)
             xt = F.leaky_relu(xt, LRELU_SLOPE)
             if x_mask is not None:
                 xt = xt * x_mask
-            xt = c2(xt)
+            if str(x.device) != "mps:0":
+                xt = c2(xt)
+            else:
+                xt = conv1d_chunked(c2, xt)
             x = xt + x
         if x_mask is not None:
             x = x * x_mask
