@@ -1,45 +1,55 @@
 from setuptools import setup, find_packages
+import os
 
+base_dir = os.path.dirname(os.path.abspath(__file__))
 
-setup(name='MyShell-OpenVoice',
-      version='0.0.0',
-      description='Instant voice cloning by MyShell.',
-      long_description=open('README.md').read().strip(),
-      long_description_content_type='text/markdown',
-      keywords=[
-            'text-to-speech',
-            'tts',
-            'voice-clone',
-            'zero-shot-tts'
-      ],
-      url='https://github.com/myshell-ai/OpenVoice',
-      project_urls={
-        'Documentation': 'https://github.com/myshell-ai/OpenVoice/blob/main/docs/USAGE.md',
-        'Changes': 'https://github.com/myshell-ai/OpenVoice/releases',
-        'Code': 'https://github.com/myshell-ai/OpenVoice',
-        'Issue tracker': 'https://github.com/myshell-ai/OpenVoice/issues',
-      },
-      author='MyShell',
-      author_email='ethan@myshell.ai',
-      license='MIT License',
-      packages=find_packages(),
+def get_requirements(path):
+    """Load and clean requirements file."""
+    if not os.path.exists(path):
+        return []
+    with open(path, encoding="utf-8") as f:
+        return [
+            line.strip()
+            for line in f
+            if line.strip() and not line.startswith("#")
+        ]
 
-      python_requires='>=3.9',
-      install_requires=[
-            'librosa==0.9.1',
-            'faster-whisper==0.9.0',
-            'pydub==0.25.1',
-            'wavmark==0.0.3',
-            'numpy==1.22.0',
-            'eng_to_ipa==0.0.2',
-            'inflect==7.0.0',
-            'unidecode==1.3.7',
-            'whisper-timestamped==1.14.2',
-            'pypinyin==0.50.0',
-            'cn2an==0.5.22',
-            'jieba==0.42.1',
-            'gradio==3.48.0',
-            'langid==1.1.6'
-      ],
-      zip_safe=False
-      )
+# Paths
+readme_path = os.path.join(base_dir, "README.md")
+requirements_path = os.path.join(base_dir, "requirements.txt")
+
+# Load README
+with open(readme_path, "r", encoding="utf-8") as f:
+    long_description = f.read().strip()
+
+setup(
+    name='OpenVoice',
+    version='0.1.0',
+    description='Instant voice cloning by MyShell - Enhanced by Gedeon.',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
+
+    keywords=[
+        'text-to-speech',
+        'tts',
+        'voice-clone',
+        'zero-shot-tts'
+    ],
+
+    url='https://github.com/beethogedeon/OpenVoice',
+    project_urls={
+        'Documentation': 'https://github.com/beethogedeon/OpenVoice/blob/main/docs/USAGE.md',
+        'Changes': 'https://github.com/beethogedeon/OpenVoice/releases',
+        'Code': 'https://github.com/beethogedeon/OpenVoice',
+        'Issue tracker': 'https://github.com/beethogedeon/OpenVoice/issues',
+    },
+
+    author='MyShell, Gedeon GBEDONOU',
+    author_email='ethan@myshell.ai, beethovengedeon@gmail.com',
+
+    license='MIT License',
+    packages=find_packages(),
+    python_requires='>=3.9',
+
+    install_requires=get_requirements(requirements_path),
+)
