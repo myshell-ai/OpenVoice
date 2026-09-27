@@ -109,7 +109,12 @@ def _expand_dollars(m):
     if len(parts) > 2:
         return match + ' dollars'  # Unexpected format
     dollars = int(parts[0]) if parts[0] else 0
-    cents = int(parts[1]) if len(parts) > 1 and parts[1] else 0
+    cents = 0
+    if len(parts) > 1 and parts[1]:
+        cents = int(parts[1])
+        # A single digit is tenths of a dollar, so $1.5 is 50 cents.
+        if len(parts[1]) == 1:
+            cents *= 10
     if dollars and cents:
         dollar_unit = 'dollar' if dollars == 1 else 'dollars'
         cent_unit = 'cent' if cents == 1 else 'cents'
