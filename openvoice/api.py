@@ -133,7 +133,9 @@ class ToneColorConverter(OpenVoiceBaseClass):
         gs = torch.stack(gs).mean(0)
 
         if se_save_path is not None:
-            os.makedirs(os.path.dirname(se_save_path), exist_ok=True)
+            save_dir = os.path.dirname(se_save_path)
+            if save_dir:
+                os.makedirs(save_dir, exist_ok=True)
             torch.save(gs.cpu(), se_save_path)
 
         return gs
